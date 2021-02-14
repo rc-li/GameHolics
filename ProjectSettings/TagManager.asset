@@ -5,7 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bullet
-  - Minion
+  - Enemy
   layers:
   - Default
   - TransparentFX
