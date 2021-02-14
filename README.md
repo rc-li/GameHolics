@@ -3,12 +3,12 @@
 #### Enemy
 1. reduce HP when shooted by *damage bullet*
 2. slow down when shooted by *slowdown bullet*
-3. healthbar
-4. there are two types of enemies right now, we could customize enemy's HP, Speed, and Value.
+3. healthBar
+4. there are two types of enemies right now, we could customize the enemy's HP, Speed, and Value
 
 #### Tower & Bullet
-1. customize shooting range. If enemy enters this range circle，tower starts to shoot automatically. If enemy leaves this range circle，tower stops shooting.
-2. automatically catch the nearest enemy and shoot it.
+1. customize shooting range. If an enemy enters this range circle，the tower starts to shoot automatically. If the enemy leaves this range circle，the tower stops shooting.
+2. automatically catch the nearest enemy and shoot it
 3. there are two types of Tower & Bullet, one is *damage* tower and the other is *damage plus slowdown* tower
 
 #### Player System
@@ -25,4 +25,4 @@ customize route(no change since week4)
 2. customize enemy type, number of enemies, and speed of enemies each wave
 
 #### System
-Re-writed *Enemy, Tower, Bullet* to inheritance structure, easy to add more types.
+Rewrite *Enemy, Tower, Bullet* to inheritance structure, easy to add more types.
