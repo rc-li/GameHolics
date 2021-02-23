@@ -1,3 +1,3 @@
 ## Week 6 Progress
-Created animations for two enemies
-Add functions for these two enemies
+1. Created animations for two enemies
+2. Add functions for these two enemies
