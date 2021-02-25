@@ -33,6 +33,7 @@ public class Enemy : MonoBehaviour
     {
         PlayerStatus.money += value;
         WaveSpawner.aliveEnemyNumber--;
+        
         Destroy(gameObject);
     }
 }

@@ -24,9 +24,15 @@ public class WaveSpawner : MonoBehaviour
         {
             return;
         }
-
+        
         if (waveIndex == waves.Length)
         {
+            //if there is no sceneFader at next level, It means we have reached last level (prevent NPE problem for now, it can be modified later)
+            if (gameStatus.sceneFader != null)
+			{
+                gameStatus.WinLevel();
+                enabled = false;
+            } 
             return;
         }
 
@@ -48,7 +54,8 @@ public class WaveSpawner : MonoBehaviour
     {
         // PlayerStatus.Rounds++ ;
         Wave wave = waves[waveIndex];
-        aliveEnemyNumber = wave.count;
+        //Fixed previous spawner bug, initialize the aliveNumber as 0
+        aliveEnemyNumber = 0;
 
         for (int i = 0; i < wave.count; i++)
         {
@@ -57,15 +64,9 @@ public class WaveSpawner : MonoBehaviour
         }
 
         waveIndex++;
-
-        if (waveIndex == waves.Length)
-        {
-            gameStatus.WinLevel();
-            this.enabled = false;
-        }
     }
 
-    void SpawnEnemy(GameObject enemy)
+    void SpawnEnemy(Enemy enemy)
     {
         Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
         aliveEnemyNumber++;

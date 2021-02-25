@@ -798,11 +798,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 616712612}
   waves:
-  - enemy: {fileID: 7463050225894032618, guid: f1b488adf38204d1da71d8e7605320f5, type: 3}
+  - enemy: {fileID: 4686297328561769056, guid: f1b488adf38204d1da71d8e7605320f5, type: 3}
     count: 3
-    rate: 0.5
+    rate: 1
+  - enemy: {fileID: 3033535261608615289, guid: 2c4c67f523c88400d99014138a48e4d7, type: 3}
+    count: 3
+    rate: 1
   gameStatus: {fileID: 1764930347}
-  timeBetweenWaves: 3
+  timeBetweenWaves: 2
 --- !u!4 &1764930345
 Transform:
   m_ObjectHideFlags: 0

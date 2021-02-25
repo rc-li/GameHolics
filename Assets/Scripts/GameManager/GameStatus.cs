@@ -31,6 +31,7 @@ public class GameStatus : MonoBehaviour
     {
         Debug.Log("win level");
         PlayerPrefs.SetInt("levelReached", nextLevel);
+        Debug.Log(nextLevel);
         sceneFader.FadeToScene(nextLevelName);
     }
 }
