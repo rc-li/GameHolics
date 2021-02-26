@@ -52,11 +52,15 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
+*/.DS_Store
 
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb.meta
 *.mdb.meta
+
+#Photon Bolt
+Assets/PhotonBolt/
 
 # Unity3D generated file on crash reports
 sysinfo.txt
