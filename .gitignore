@@ -54,6 +54,13 @@ ExportedObj/
 *.VC.db
 */.DS_Store
 
+#有的时候可能在开发的过程中你会在asset store里面下很多东西，那些被你采用了的就直接拖到工程代码里面去，
+#没有被采用的，你可以直接放在如下文件夹中
+#emmm... 所有不需要上传到repo，但是可能在local还要用到或者以后可能用到的都放在这里吧，
+#等以后你要用了再从里面取出来
+/Aassets/Ignore
+
+
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb.meta
