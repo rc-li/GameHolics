@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class WaveSpawner : MonoBehaviour
 {
     public static int aliveEnemyNumber;
+
     public Transform spawnPoint;
     public Wave[] waves;
     public GameStatus gameStatus;
@@ -17,23 +18,27 @@ public class WaveSpawner : MonoBehaviour
 
     // public Text waveCountdownText;
 
+    private void Start()
+    {
+        aliveEnemyNumber = 0;
+    }
 
-    void Update()
+    private void Update()
     {
         if (aliveEnemyNumber > 0)
         {
             return;
         }
-        
+
         if (waveIndex == waves.Length)
         {
             //if there is no sceneFader at next level, It means we have reached last level (prevent NPE problem for now, it can be modified later)
-            if (gameStatus.sceneFader != null)
-			{
-                gameStatus.WinLevel();
-                enabled = false;
-            } 
-            return;
+            // if (gameStatus.sceneFader != null)
+            // {
+            gameStatus.WinLevel();
+            enabled = false;
+            // } 
+            // return;
         }
 
         if (countdown <= 0.0f)
@@ -46,13 +51,12 @@ public class WaveSpawner : MonoBehaviour
         countdown -= Time.deltaTime;
 
         countdown = Mathf.Clamp(countdown, 0.0f, Mathf.Infinity);
-
         // waveCountdownText.text = string.Format("{0:00.00}", countdown);
     }
 
     IEnumerator SpawnWave()
     {
-        // PlayerStatus.Rounds++ ;
+        PlayerStatus.Rounds++;
         Wave wave = waves[waveIndex];
         //Fixed previous spawner bug, initialize the aliveNumber as 0
         aliveEnemyNumber = 0;
