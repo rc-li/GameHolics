@@ -136,10 +136,10 @@ Completed:
      - Level selector buttons: pass current level to unlock the next level
      - Reset Button: reset game progress; only level 1 is unlocked
 
-![pause_menu](./images/pause_menu.png)
+<img src="./images/pause_menu.png" alt="pause_menu" width="60%" />
 
-![win_level_menu](./images/win_level_menu.png)
+<img src="./images/win_level_menu.png" alt="win_level_menu" width="60%" />
 
-![win_game_menu](./images/win_game_menu.png)
+<img src="./images/win_game_menu.png" alt="win_game_menu" width="60%" />
 
-![level_select_menu](./images/level_select_menu.png)
+<img src="./images/level_select_menu.png" alt="level_select_menu" width="60%" />
