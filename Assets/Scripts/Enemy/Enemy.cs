@@ -11,17 +11,17 @@ public class Enemy : MonoBehaviour
 
     public float speed;
     public HealthBar healthbar;
+    private bool isDead = false;
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         healthbar.SetCurrentHealth(currentHealth);
 
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && !isDead)
         {
             Die();
         }
-        // Debug.Log("parent damage function");
     }
 
     public void SlowDown(float slowPercent)
@@ -31,6 +31,7 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
+        isDead = true;
         PlayerStatus.money += value;
         WaveSpawner.aliveEnemyNumber--;
         Destroy(gameObject);

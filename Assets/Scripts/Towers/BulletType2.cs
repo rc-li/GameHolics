@@ -7,7 +7,7 @@ public class BulletType2 : Bullet
     void Start()
     {
         speed = 5.0f;
-        damage = 5;
+        damage = 20;
         slowPercent = 0.3f;
     }
 

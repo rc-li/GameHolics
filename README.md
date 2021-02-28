@@ -103,3 +103,43 @@ Implemented start menu with volume control
 
 1. Implemented choosing and placing tower
 2. Game audio integration
+
+---
+
+### Week 7 Progress
+
+Gameplay group(Donghao, Ruoxuan, Shuqi)
+
+Completed: 
+
+- Fixed enemy animation bug
+- Fixed spawner bug
+- Connect scene by SceneFader component
+
+- Menus (all functions work)
+
+  1. Pause Menu(Press Space to trigger)
+     - Back Button
+     - Restart Button
+     - Main Menu Button
+
+  2. Win Level Menu
+     - display rounds survived
+     - Next Level Button
+     - Main Menu Button
+
+  3. Win Game Menu
+     - display rounds survived
+     - Main Menu Button
+
+  4. Level Selector Menu
+     - Level selector buttons: pass current level to unlock the next level
+     - Reset Button: reset game progress; only level 1 is unlocked
+
+<img src="./images/pause_menu.png" alt="pause_menu" width="60%" />
+
+<img src="./images/win_level_menu.png" alt="win_level_menu" width="60%" />
+
+<img src="./images/win_game_menu.png" alt="win_game_menu" width="60%" />
+
+<img src="./images/level_select_menu.png" alt="level_select_menu" width="60%" />
