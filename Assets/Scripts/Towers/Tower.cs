@@ -69,6 +69,8 @@ public class Tower : MonoBehaviour
         if (bullet != null)
         {
             bullet.LocateTarget(target);
+            // shooting audio
+            bullet.GetComponent<AudioSource>().Play();
         }
     }
 

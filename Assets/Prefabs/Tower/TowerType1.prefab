@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 7215644528679639724}
   - component: {fileID: 7215644528679639723}
   m_Layer: 0
-  m_Name: Tower
+  m_Name: TowerType1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,7 +101,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 478a5a86fd6f246aab20c63f2e1e087e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -125,9 +125,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8386df61cb7d0452599998da6a503d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 0
-  fireRate: 0
-  fireCountdown: 0
   firePoint: {fileID: 7215644528311108480}
   bulletPrefab: {fileID: 2893709064535535009, guid: 1260efd204b5741289ae6311bf02cbe6,
     type: 3}

@@ -13,10 +13,13 @@ public class PlayerStatus : MonoBehaviour
 
     public static int Rounds;
 
+    public static GameObject towerPrefab;
+
     void Start()
     {
         lives = startLives;
         money = startMoney;
         Rounds = 0;
+        towerPrefab = null;
     }
 }

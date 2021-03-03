@@ -19,6 +19,8 @@ public class TowerType2 : Tower
         if (bullet != null)
         {
             bullet.LocateTarget(target);
+            // shooting audio
+            bullet.GetComponent<AudioSource>().Play();
         }
     }
 }

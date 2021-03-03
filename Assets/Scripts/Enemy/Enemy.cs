@@ -35,5 +35,9 @@ public class Enemy : MonoBehaviour
         PlayerStatus.money += value;
         WaveSpawner.aliveEnemyNumber--;
         Destroy(gameObject);
+
+        // death audio
+        AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+        AudioSource.PlayClipAtPoint(audioSource.clip, transform.position);
     }
 }
