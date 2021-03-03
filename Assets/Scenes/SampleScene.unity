@@ -534,7 +534,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 777903257}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c82eecafe9cc4709924a9069a6ad882, type: 3}
+  m_Script: {fileID: 11500000, guid: cefd81e13faab9540889d235733f5923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   livesText: {fileID: 777903260}
@@ -840,6 +840,7 @@ MonoBehaviour:
   - enemy: {fileID: 6274893851597861112, guid: 822a7ff7d551d4124914ef9f886386b1, type: 3}
     count: 6
     rate: 3
+  gameStatus: {fileID: 0}
   timeBetweenWaves: 3
 --- !u!4 &1764930345
 Transform:
@@ -883,6 +884,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 724ce137c9d6e418ea587532ede6f4f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextLevelName: Level2
+  nextLevel: 2
+  sceneFader: {fileID: 0}
 --- !u!1 &2072017095
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,7 +934,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2072017095}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 948fddcac7c5642a4809a5c97a0f284c, type: 3}
+  m_Script: {fileID: 11500000, guid: 89b04d8ee5d765042910855033b96f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moneyText: {fileID: 2072017098}

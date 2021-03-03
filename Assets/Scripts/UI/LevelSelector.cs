@@ -31,4 +31,9 @@ public class LevelSelector : MonoBehaviour
         sceneFader.FadeToScene("LevelSelector");
     }
 
+    public void StartMenu() {
+        sceneFader.FadeToScene("StartMenu");
+    }
+
+
 }
