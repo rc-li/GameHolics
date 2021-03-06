@@ -23,7 +23,7 @@ public class SelectTowerType1 : MonoBehaviour
     {
         Debug.Log ("Button Clicked");
     }
-    void OnMouseUp()
+    public void OnMouseUp()
 	{
         PlayerStatus.towerPrefab = towerPrefab;
         PlayerStatus.selectTowerNumber = 1;

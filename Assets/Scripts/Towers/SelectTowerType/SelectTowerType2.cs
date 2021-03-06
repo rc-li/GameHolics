@@ -19,7 +19,7 @@ public class SelectTowerType2 : MonoBehaviour
         
     }
 
-    void OnMouseUp()
+    public void OnMouseUp()
 	{
         PlayerStatus.towerPrefab = towerPrefab;
         PlayerStatus.selectTowerNumber = 2;
