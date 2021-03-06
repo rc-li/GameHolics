@@ -11,9 +11,21 @@ public class DrawTenCards : MonoBehaviour
         //{
         //    GameObject gameObject = GameObject.Find("C" + i);
 
-        //}
-        GameObject gameObject = GameObject.Find("C");
-        gameObject.GetComponent("Card").GetComponent;
+        //
+        //Transform gameObject = transform.Find("Card").Find("Front");
+        Transform[] cards = new Transform[transform.childCount];
+        for(var i = 0; i < transform.childCount; i++)
+        {
+            Transform card = transform.GetChild(i);
+            
+            cards[i] = card;
+        }
+
+        foreach(Transform card in cards)
+        {
+           
+        }
+        //gameObject.GetComponent("Card").GetComponent;
         //GameObject gameObject = GameObject.Find("C0");
         //gameObject.transform.SetPositionAndRotation(new Vector3(0, 0, 0), gameObject.transform.rotation);
     }
