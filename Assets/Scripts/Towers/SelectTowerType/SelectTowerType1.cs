@@ -5,6 +5,7 @@ using UnityEngine;
 public class SelectTowerType1 : MonoBehaviour
 {
 	public GameObject towerPrefab;
+    public static int towerPrice = 30;
 
     // Start is called before the first frame update
     void Start()
@@ -18,9 +19,14 @@ public class SelectTowerType1 : MonoBehaviour
         
     }
 
+    public void Click()
+    {
+        Debug.Log ("Button Clicked");
+    }
     void OnMouseUp()
 	{
         PlayerStatus.towerPrefab = towerPrefab;
-        // Debug.Log("Type 1 tower selected!!!");
+        PlayerStatus.selectTowerNumber = 1;
+        //Debug.Log("Type 1 tower selected!!!");
 	}
 }

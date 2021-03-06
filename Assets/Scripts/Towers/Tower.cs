@@ -7,7 +7,7 @@ public class Tower : MonoBehaviour
     protected Transform target;
     protected string enemyTag = "Enemy";
     // private Enemy targetEnemy;
-
+    protected int price = 0;
     protected float range; // tower shooting range
     protected float fireRate; // bullet number shooted per second
     protected float fireCountdown = 0.0f; // timer
@@ -84,5 +84,9 @@ public class Tower : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, range);
     }
 
+    public int GetPrice()
+    {
+        return price;
+    }
 }
 

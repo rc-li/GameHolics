@@ -22,6 +22,7 @@ public class PlaceTower : MonoBehaviour
 
     private bool canPlaceTower()
     {
+        
         return tower == null;
     }
 
@@ -29,8 +30,24 @@ public class PlaceTower : MonoBehaviour
 	{
         if (canPlaceTower())
         {
-            tower = (GameObject) Instantiate(PlayerStatus.towerPrefab, transform.position, Quaternion.identity);
-
+            if (PlayerStatus.selectTowerNumber == 1 && PlayerStatus.money >= SelectTowerType1.towerPrice)
+            {
+                tower = (GameObject) Instantiate(PlayerStatus.towerPrefab, transform.position, Quaternion.identity);
+                PlayerStatus.money -= SelectTowerType1.towerPrice;
+            }
+            if (PlayerStatus.selectTowerNumber == 2 && PlayerStatus.money >= SelectTowerType2.towerPrice)
+            {
+                tower = (GameObject) Instantiate(PlayerStatus.towerPrefab, transform.position, Quaternion.identity);
+                PlayerStatus.money -= SelectTowerType2.towerPrice;
+            }
+            if (PlayerStatus.selectTowerNumber == 3 && PlayerStatus.money >= SelectTowerType3.towerPrice)
+            {
+                tower = (GameObject) Instantiate(PlayerStatus.towerPrefab, transform.position, Quaternion.identity);
+                PlayerStatus.money -= SelectTowerType3.towerPrice;
+            }
+            //tower = (GameObject) Instantiate(PlayerStatus.towerPrefab, transform.position, Quaternion.identity);
+            //Debug.Log(tower.GetComponent<Tower>().GetPrice());
+            //PlayerStatus.money -= tower.GetComponent<Tower>().GetPrice();
             AudioSource audioSource = gameObject.GetComponent<AudioSource>();
             audioSource.PlayOneShot(audioSource.clip);
         }

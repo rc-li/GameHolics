@@ -14,6 +14,7 @@ public class PlayerStatus : MonoBehaviour
     public static int Rounds;
 
     public static GameObject towerPrefab;
+    public static int selectTowerNumber;
 
     void Start()
     {
