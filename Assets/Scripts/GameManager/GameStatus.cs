@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameStatus : MonoBehaviour
 {
 
-    public static bool gameOver;
+    // public static bool gameOver;
 
     public GameObject winLevelMenu;
     private WinLevelMenu _winLevelMenu;
@@ -13,26 +13,33 @@ public class GameStatus : MonoBehaviour
     private int totalLevels = 2;
     public string nextLevelName;
 
+    public GameObject gameOverMenu;
+    public string currentLevelName;
+    private int currentLevel;
+
     private void Start()
     {
-        gameOver = false;
+        // gameOver = false;
+        currentLevel = SceneManager.GetActiveScene().buildIndex;
+
     }
 
-    private void Update()
-    {
-        if (gameOver) return;
-        if (PlayerStatus.lives <= 0) EndGame();
-    }
+    // private void Update()
+    // {
+    //     if (gameOver) return;
+    //     if (PlayerStatus.lives <= 0) EndGame();
+    // }
 
-    public void EndGame()
+    public void GameOver()
     {
-        gameOver = true;
-        Debug.Log("Game Over");
+        PlayerStatus.Rounds--;
+        currentLevelName = GetSceneNameByBuildIndex(currentLevel);
+        gameOverMenu.SetActive(true);
+        return;
     }
 
     public void WinLevel()
     {
-        int currentLevel = SceneManager.GetActiveScene().buildIndex;
         if (currentLevel < totalLevels)
         {
             winLevelMenu.SetActive(true);
@@ -44,8 +51,6 @@ public class GameStatus : MonoBehaviour
 
     public void SetNextLevel(int _currentLevel)
     {
-
-
         int nextLevel = _currentLevel + 1;
         PlayerPrefs.SetInt("levelReached", nextLevel);
         nextLevelName = GetSceneNameByBuildIndex(nextLevel);
