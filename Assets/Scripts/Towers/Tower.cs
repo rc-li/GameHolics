@@ -18,6 +18,11 @@ public class Tower : MonoBehaviour
 
     void Update()
     {
+        if (GameStatus.gameIsOver == true)
+        {
+            enabled = false;
+        }
+
         if (target == null)
         {
             return;

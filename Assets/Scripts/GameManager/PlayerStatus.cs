@@ -23,4 +23,12 @@ public class PlayerStatus : MonoBehaviour
         Rounds = 0;
         towerPrefab = null;
     }
+
+    private void Update()
+    {
+        if (lives < 0)
+        {
+            lives = 0;
+        }
+    }
 }

@@ -30,7 +30,7 @@ public class WaveSpawner : MonoBehaviour
             return;
         }
 
-        if (waveIndex == waves.Length && PlayerStatus.lives > 0 )
+        if (waveIndex == waves.Length && PlayerStatus.lives > 0)
         {
             //if there is no sceneFader at next level, It means we have reached last level (prevent NPE problem for now, it can be modified later)
             // if (gameStatus.sceneFader != null)
@@ -42,12 +42,12 @@ public class WaveSpawner : MonoBehaviour
             // return;
         }
 
-        if (waveIndex <= waves.Length && PlayerStatus.lives <= 0)
-        {
-            gameStatus.GameOver();
-            enabled = false;
-            return;
-        }
+        // if (waveIndex <= waves.Length && PlayerStatus.lives <= 0)
+        // {
+        //     gameStatus.GameOver();
+        //     enabled = false;
+        //     return;
+        // }
 
         if (countdown <= 0.0f)
         {
@@ -77,7 +77,8 @@ public class WaveSpawner : MonoBehaviour
             yield return new WaitForSeconds(1.0f / wave.rate);
         }
 
-        if (waveIndex <= waves.Length-1) {
+        if (waveIndex <= waves.Length - 1)
+        {
             waveIndex++;
             // Debug.Log("====" + waveIndex);
         }
