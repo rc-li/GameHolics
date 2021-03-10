@@ -43,14 +43,19 @@ public class GameStatus : MonoBehaviour
 
     public void WinLevel()
     {
-        gameIsOver = false;
+        gameIsOver = true;
 
         if (currentLevel < totalLevels)
         {
             winLevelMenu.SetActive(true);
             SetNextLevel(currentLevel);
         }
-        WinGame();
+
+        else if (currentLevel == totalLevels)
+        {
+             WinGame();
+        }
+        
     }
 
     public void SetNextLevel(int _currentLevel)
@@ -70,7 +75,7 @@ public class GameStatus : MonoBehaviour
 
     private void WinGame()
     {
-        gameIsOver = false;
+        gameIsOver = true;
         winGameMenu.SetActive(true);
     }
 }
