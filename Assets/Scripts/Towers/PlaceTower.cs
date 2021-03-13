@@ -37,13 +37,13 @@ public class PlaceTower : MonoBehaviour
                 PlayerStatus.money -= SelectTowerType1.towerPrice;
                 audioSource.PlayOneShot(audioSource.clip);
             }
-            if (PlayerStatus.selectTowerNumber == 2 && PlayerStatus.money >= SelectTowerType2.towerPrice)
+            else if (PlayerStatus.selectTowerNumber == 2 && PlayerStatus.money >= SelectTowerType2.towerPrice)
             {
                 tower = (GameObject) Instantiate(PlayerStatus.towerPrefab, transform.position, Quaternion.identity);
                 PlayerStatus.money -= SelectTowerType2.towerPrice;
                 audioSource.PlayOneShot(audioSource.clip);
             }
-            if (PlayerStatus.selectTowerNumber == 3 && PlayerStatus.money >= SelectTowerType3.towerPrice)
+            else if (PlayerStatus.selectTowerNumber == 3 && PlayerStatus.money >= SelectTowerType3.towerPrice)
             {
                 tower = (GameObject) Instantiate(PlayerStatus.towerPrefab, transform.position, Quaternion.identity);
                 PlayerStatus.money -= SelectTowerType3.towerPrice;
