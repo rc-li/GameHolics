@@ -30,16 +30,24 @@ public class WaveSpawner : MonoBehaviour
             return;
         }
 
-        if (waveIndex == waves.Length)
+        if (waveIndex == waves.Length && PlayerStatus.lives > 0)
         {
             //if there is no sceneFader at next level, It means we have reached last level (prevent NPE problem for now, it can be modified later)
             // if (gameStatus.sceneFader != null)
             // {
             gameStatus.WinLevel();
             enabled = false;
+            return;
             // } 
             // return;
         }
+
+        // if (waveIndex <= waves.Length && PlayerStatus.lives <= 0)
+        // {
+        //     gameStatus.GameOver();
+        //     enabled = false;
+        //     return;
+        // }
 
         if (countdown <= 0.0f)
         {
@@ -59,7 +67,9 @@ public class WaveSpawner : MonoBehaviour
         PlayerStatus.Rounds++;
         Wave wave = waves[waveIndex];
         //Fixed previous spawner bug, initialize the aliveNumber as 0
-        aliveEnemyNumber = 0;
+        // aliveEnemyNumber = 0;
+        aliveEnemyNumber = wave.count;
+
 
         for (int i = 0; i < wave.count; i++)
         {
@@ -67,12 +77,16 @@ public class WaveSpawner : MonoBehaviour
             yield return new WaitForSeconds(1.0f / wave.rate);
         }
 
-        waveIndex++;
+        if (waveIndex <= waves.Length - 1)
+        {
+            waveIndex++;
+            // Debug.Log("====" + waveIndex);
+        }
     }
 
     void SpawnEnemy(Enemy enemy)
     {
         Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
-        aliveEnemyNumber++;
+        // aliveEnemyNumber++;
     }
 }

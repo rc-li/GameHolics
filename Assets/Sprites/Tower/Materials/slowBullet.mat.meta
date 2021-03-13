@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 10903692c7a86c345bf8b43089065a17
+=======
+guid: ba802bf5b911b98439098e73bc5b9bc6
+>>>>>>> week7-integration
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000

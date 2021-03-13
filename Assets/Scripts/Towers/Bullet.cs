@@ -10,12 +10,15 @@ public class Bullet : MonoBehaviour
     protected int damage;
     protected float slowPercent;
 
-    public void LocateTarget (Transform _target) {
+    public void LocateTarget(Transform _target)
+    {
         target = _target;
     }
 
-    private void Update() {
-        if (target == null) {
+    private void Update()
+    {
+        if (target == null)
+        {
             Destroy(gameObject);
             return;
         }
@@ -25,7 +28,8 @@ public class Bullet : MonoBehaviour
 
         // to make sure we can touch the target in this frame
         // direction.magnitude -> the length of direction vector
-        if ( direction.magnitude <= distanceThisFrame) {
+        if (direction.magnitude <= distanceThisFrame)
+        {
             HitTarget();
             return;
         }
@@ -33,7 +37,8 @@ public class Bullet : MonoBehaviour
         transform.Translate(direction.normalized * distanceThisFrame, Space.World);
     }
 
-    protected virtual void HitTarget() {
+    protected virtual void HitTarget()
+    {
         Destroy(gameObject);
     }
 }

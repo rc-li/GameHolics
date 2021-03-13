@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: a32621c96bb43604897d06e536e5be68
+=======
+guid: 5621ead73f9ecc542aa56e82b309117a
+>>>>>>> week7-integration
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

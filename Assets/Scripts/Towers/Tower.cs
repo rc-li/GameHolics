@@ -7,7 +7,7 @@ public class Tower : MonoBehaviour
     protected Transform target;
     protected string enemyTag = "Enemy";
     // private Enemy targetEnemy;
-
+    protected int price = 0;
     protected float range; // tower shooting range
     protected float fireRate; // bullet number shooted per second
     protected float fireCountdown = 0.0f; // timer
@@ -18,6 +18,11 @@ public class Tower : MonoBehaviour
 
     void Update()
     {
+        if (GameStatus.gameIsOver == true)
+        {
+            enabled = false;
+        }
+
         if (target == null)
         {
             return;
@@ -69,6 +74,8 @@ public class Tower : MonoBehaviour
         if (bullet != null)
         {
             bullet.LocateTarget(target);
+            // shooting audio
+            bullet.GetComponent<AudioSource>().Play();
         }
     }
 
@@ -82,5 +89,9 @@ public class Tower : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, range);
     }
 
+    public int GetPrice()
+    {
+        return price;
+    }
 }
 
