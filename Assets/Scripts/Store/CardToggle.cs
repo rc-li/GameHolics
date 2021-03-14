@@ -89,12 +89,12 @@ public class CardToggle : MonoBehaviour
 
     public void Toggle()
     {
-        if (mCardState == CardState.Front)
-        {
-            StartBack();
-            mCardState = CardState.Back;
-        }
-        else
+        //if (mCardState == CardState.Front)
+        //{
+        //    StartBack();
+        //    mCardState = CardState.Back;
+        //}
+        //else
         {
             StartFront();
             mCardState = CardState.Front;
