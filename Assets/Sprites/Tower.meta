@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 26565387121d4bc44b5fdb0b598b150f
+=======
 guid: b0b66ca271ac13b419d73b4e376f9ce7
+>>>>>>> week7-integration
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
