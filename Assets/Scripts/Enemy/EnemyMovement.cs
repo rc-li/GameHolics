@@ -25,11 +25,6 @@ public class EnemyMovement : MonoBehaviour
         {
             GetNextWayPoint();
         }
-
-        if (GameStatus.gameIsOver == true)
-        {
-            enabled = false;
-        }
     }
 
     void GetNextWayPoint()

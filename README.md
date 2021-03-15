@@ -1,145 +1,30 @@
-# GameHolics
+## Week 5
 
-A student group at USC, aiming at the next generation tower defense game.
+### Accomplished 
+#### Enemy
+1. Reduce HP when shooted by *damage bullet*
+2. Slow down when shooted by *slowdown bullet*
+3. HealthBar
+4. There are two types of enemies right now, we could customize the enemy's HP, Speed, and Value
 
+#### Tower & Bullet
+1. Customize shooting range. If an enemy enters this range circle，the tower starts to shoot automatically. If the enemy leaves this range circle，the tower stops shooting.
+2. Automatically catch the nearest enemy and shoot it
+3. There are three types of Tower & Bullet: *damage* tower, *damage plus slowdown* tower, and with damage bonus tower.
 
+#### Player System
+1. Each enemy has a value property，when enemy is killed，player money += enemy value
+2. When enemy arrives destination，player lives--
+3. Player lives and money are displayed on top canvas
 
-## Integrations
+#### GameManager
+##### WayPoints
+Customize route(no change since week4)
 
-###### edited by Ruoxw Feb 23
+##### WaveSpawner
+1. Customize number of waves
+2. Customize enemy type, number of enemies, and speed of enemies each wave
 
-### System Integration
+#### System
+Rewrite *Enemy, Tower, Bullet* to inheritance structure, easy to add more types.
 
-#### Folder Structure
-
-- Animations
-  - UI: for all the animations related to UI (e.g. Button.controller)
-  - Enemy
-  - etc.
-- Font (hardly changing)
-- Prefabs
-  - UI: for all prefabs related to UI (e.g. LevelButton.prefab)
-  - Enemy
-  - Tower
-  - etc.
-- Scenes (hardly changing)
-- Scripts
-  - Game Manager: for all scripts related to game mechanism management (e.g. GameStatus.cs)
-  - UI: for all scripts related to UI Canvas, etc.
-  - Enemy
-  - Tower
-  - etc.
-- Sprites
-  - Others: for game public components (e.g. HealthBar.png)
-  - Enemy
-  - Tower
-  - Tiles: only for tilemap sprites
-  - etc.
-- Tilemap (only for tailmap palette)
-
-
-
-When put new stuff into **Animations, Prefabs, Sprites, Scripts** folder, put them in the right folder or create a new folder.
-
-
-
-### Github Integration
-
-All changes push to **main** branch
-
-But we can also create individual branches as workspaces.
-
-We only need to push these listed ...stuff in our game project GitHub repository
-
-- Assets
-- Pakages
-- ProjectSettings
-- .gitignore
-- README.md
-
-
-
-##### Personal thought if it helps...
-
-Now we have a new version of .gitignore, so we can either 
-
-1. Totally delete the old individual branch *(I tried force pull, force push, rest etc., but didn'y work well... Delete both remote and local individual branch and create a new one(with a different name - important) works for me)*
-
-Or
-
-2. Clean untracked files by command
-
-   ` git rm --cached <file_name>`
-
-   ...and then push to the old individual branch.
-
-
-
-Good Luck!
-
-
-
-
-
-## Dev Log
-
-### Week 6 Progress
-
-#### Donghao
-
-1. Created animations for two enemies
-2. Add functions for these two enemies
-
-#### Ruoxuan
-
-1. System Integration readme
-2. Level select and unlock
-
-#### Sheng
-
-Implemented start menu with volume control
-
-#### Shuqi
-
-1. Implemented choosing and placing tower
-2. Game audio integration
-
----
-
-### Week 7 Progress
-
-Gameplay group(Donghao, Ruoxuan, Shuqi)
-
-Completed: 
-
-- Fixed enemy animation bug
-- Fixed spawner bug
-- Connect scene by SceneFader component
-
-- Menus (all functions work)
-
-  1. Pause Menu(Press Space to trigger)
-     - Back Button
-     - Restart Button
-     - Main Menu Button
-
-  2. Win Level Menu
-     - display rounds survived
-     - Next Level Button
-     - Main Menu Button
-
-  3. Win Game Menu
-     - display rounds survived
-     - Main Menu Button
-
-  4. Level Selector Menu
-     - Level selector buttons: pass current level to unlock the next level
-     - Reset Button: reset game progress; only level 1 is unlocked
-
-<img src="./images/pause_menu.png" alt="pause_menu" width="60%" />
-
-<img src="./images/win_level_menu.png" alt="win_level_menu" width="60%" />
-
-<img src="./images/win_game_menu.png" alt="win_game_menu" width="60%" />
-
-<img src="./images/level_select_menu.png" alt="level_select_menu" width="60%" />

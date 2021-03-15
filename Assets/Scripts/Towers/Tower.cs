@@ -6,8 +6,8 @@ public class Tower : MonoBehaviour
 {
     protected Transform target;
     protected string enemyTag = "Enemy";
-    // private Enemy targetEnemy;
-    protected int price = 0;
+    private Enemy targetEnemy;
+
     protected float range; // tower shooting range
     protected float fireRate; // bullet number shooted per second
     protected float fireCountdown = 0.0f; // timer
@@ -16,13 +16,16 @@ public class Tower : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
 
+    //Add
+    private int damageAmount;
+
+    private void Awake()
+    {
+        damageAmount = 5;
+    }
+
     void Update()
     {
-        if (GameStatus.gameIsOver == true)
-        {
-            enabled = false;
-        }
-
         if (target == null)
         {
             return;
@@ -74,8 +77,6 @@ public class Tower : MonoBehaviour
         if (bullet != null)
         {
             bullet.LocateTarget(target);
-            // shooting audio
-            bullet.GetComponent<AudioSource>().Play();
         }
     }
 
@@ -89,9 +90,26 @@ public class Tower : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, range);
     }
 
-    public int GetPrice()
+    // Add
+    public float GetRange()
     {
-        return price;
+        return range;
     }
+
+    public void UpgradeRange()
+    {
+        range += 0.3f;
+    }
+
+    public void UpgradeDamageAmount()
+    {
+        damageAmount += 5;
+    }
+
+    private void OnMouseEnter()
+    {
+        UpgradeOverlay.Show_Static(this);
+    }
+
 }
 

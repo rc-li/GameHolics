@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8922227920460097120}
   - component: {fileID: 8922227920460097135}
   m_Layer: 0
-  m_Name: MinionType1
+  m_Name: EnemyType1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -108,7 +108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ea5695e67eb24721acb194d3eb8ec4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSpeed: 0
   speed: 1.5
   healthbar: {fileID: 8922227921443100185}
 --- !u!1 &8922227921053605548

@@ -6,7 +6,7 @@ public class TowerType2 : Tower
 {
     public void Start()
     {
-        range = 3.0f;
+        range = 1.5f;
         fireRate = 3.0f;
         InvokeRepeating("UpdateTarget", 0.0f, 0.5f); // invoke UpdateTarget() every 0.5 seconds starts from 0 second
     }
@@ -19,8 +19,6 @@ public class TowerType2 : Tower
         if (bullet != null)
         {
             bullet.LocateTarget(target);
-            // shooting audio
-            bullet.GetComponent<AudioSource>().Play();
         }
     }
 }

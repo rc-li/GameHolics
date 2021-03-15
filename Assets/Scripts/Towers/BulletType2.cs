@@ -7,7 +7,7 @@ public class BulletType2 : Bullet
     void Start()
     {
         speed = 5.0f;
-        damage = 20;
+        damage = 5;
         slowPercent = 0.3f;
     }
 
@@ -15,7 +15,9 @@ public class BulletType2 : Bullet
     {
         base.HitTarget();
         target.GetComponent<Enemy>().TakeDamage(damage);
+        Debug.Log("type 2 buttlet damage: " + damage);
         target.GetComponent<Enemy>().SlowDown(slowPercent);
         // Debug.Log("type 2 buttlet damage");
     }
+
 }
