@@ -4,9 +4,9 @@ using UnityEngine.UI;
 public class LivesUI : MonoBehaviour
 {
     public Text livesText;
-
-    void Update()
+   
+	void Update()
     {
-        livesText.text = PlayerStatus.lives.ToString() + " Lives";
+        livesText.text = "       " + PlayerStatus.lives.ToString();
     }
 }
