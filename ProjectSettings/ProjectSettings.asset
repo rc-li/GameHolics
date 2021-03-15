@@ -639,6 +639,7 @@ PlayerSettings:
   webGLWasmStreaming: 0
   scriptingDefineSymbols:
     1: BOLT_CLOUD
+    7: BOLT_CLOUD
   platformArchitecture: {}
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}
