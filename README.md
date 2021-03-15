@@ -4,6 +4,37 @@ A student group at USC, aiming at the next generation tower defense game.
 
 
 
+### TODO: (updated Mar 14 2021)
+
+###### 暂时能想到的东西... written by ruoxuanw
+
+还没开始的模块：
+1. 找一套地图asset，还原学校地图（共5个level）
+2. tutorial system （写故事情节，对话）
+
+改进：
+
+代码方面：
+
+1. 扩展塔的类型，增加skill
+2. 塔upgrade
+3. 放置塔时，点击塔显示塔的样子（解决点击完不知道点没点上的问题）
+4. 下一波敌人来临（波次直接倒计时，参考植物大战僵尸右下角进度条）
+
+UI方面：
+1. 换子弹样式
+2. 塔换成动态的比较好？（找素材）
+3. polish GUI （UI canvas的样式改进，canvas上的objects调整大小、位置等）
+4. 增加音效（比如gameover后播放不同的音乐）
+
+
+
+
+
+
+
+
+
 ## Integrations
 
 ###### edited by Ruoxw Feb 23
@@ -92,7 +123,7 @@ Good Luck!
 
 #### Ruoxuan
 
-1. System Integration readme
+1. System Integration
 2. Level select and unlock
 
 #### Sheng
@@ -107,8 +138,6 @@ Implemented start menu with volume control
 ---
 
 ### Week 7 Progress
-
-Gameplay group(Donghao, Ruoxuan, Shuqi)
 
 Completed: 
 
@@ -143,3 +172,6 @@ Completed:
 <img src="./images/win_game_menu.png" alt="win_game_menu" width="60%" />
 
 <img src="./images/level_select_menu.png" alt="level_select_menu" width="60%" />
+
+<img src="./images/gameover_menu.png" alt="gameover_menu" width="60%" />
+
