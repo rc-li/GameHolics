@@ -66,8 +66,8 @@ ExportedObj/
 *.pdb.meta
 *.mdb.meta
 
-#Photon Bolt
-Assets/PhotonBolt/
+#Photon BoltAssets/PhotonBolt/
+
 
 # Unity3D generated file on crash reports
 sysinfo.txt
