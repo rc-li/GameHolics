@@ -6,7 +6,7 @@ public class TowerType3 : Tower
 {
     public void Start()
     {
-        range = 2.0f;
+        range = 3.0f;
         fireRate = 2.0f;
         InvokeRepeating("UpdateTarget", 0.0f, 0.5f); // invoke UpdateTarget() every 0.5 seconds starts from 0 second
     }

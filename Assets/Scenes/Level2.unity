@@ -526,11 +526,31 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1764930350}
+    - target: {fileID: 3618268999633241528, guid: 9e933742310cb4517b92835d3505c6ac,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618268999633241528, guid: 9e933742310cb4517b92835d3505c6ac,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3618268999932441390, guid: 9e933742310cb4517b92835d3505c6ac,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1764930348}
+    - target: {fileID: 3618268999997208463, guid: 9e933742310cb4517b92835d3505c6ac,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618268999997208463, guid: 9e933742310cb4517b92835d3505c6ac,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3618269000375715875, guid: 9e933742310cb4517b92835d3505c6ac,
         type: 3}
       propertyPath: m_Pivot.x
@@ -646,6 +666,46 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1764930349}
+    - target: {fileID: 3618269000636163939, guid: 9e933742310cb4517b92835d3505c6ac,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618269000636163939, guid: 9e933742310cb4517b92835d3505c6ac,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618269000638695402, guid: 9e933742310cb4517b92835d3505c6ac,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618269000638695402, guid: 9e933742310cb4517b92835d3505c6ac,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618269000696529655, guid: 9e933742310cb4517b92835d3505c6ac,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618269000696529655, guid: 9e933742310cb4517b92835d3505c6ac,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618269000750800519, guid: 9e933742310cb4517b92835d3505c6ac,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618269000750800519, guid: 9e933742310cb4517b92835d3505c6ac,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3618269000981991999, guid: 9e933742310cb4517b92835d3505c6ac,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -656,21 +716,61 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1764930348}
+    - target: {fileID: 3618269001136436151, guid: 9e933742310cb4517b92835d3505c6ac,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618269001136436151, guid: 9e933742310cb4517b92835d3505c6ac,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3618269001158277302, guid: 9e933742310cb4517b92835d3505c6ac,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1764930348}
+    - target: {fileID: 4500025375763092977, guid: 9e933742310cb4517b92835d3505c6ac,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500025375763092977, guid: 9e933742310cb4517b92835d3505c6ac,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4500025375835663422, guid: 9e933742310cb4517b92835d3505c6ac,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1764930351}
+    - target: {fileID: 4500025375868736711, guid: 9e933742310cb4517b92835d3505c6ac,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500025375868736711, guid: 9e933742310cb4517b92835d3505c6ac,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4500025376590638396, guid: 9e933742310cb4517b92835d3505c6ac,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1764930351}
+    - target: {fileID: 4500025376989821715, guid: 9e933742310cb4517b92835d3505c6ac,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500025376989821715, guid: 9e933742310cb4517b92835d3505c6ac,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e933742310cb4517b92835d3505c6ac, type: 3}
 --- !u!1 &408143278 stripped
@@ -1946,8 +2046,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 616712612}
   waves:
-  - enemy: {fileID: 4686297328561769056, guid: f1b488adf38204d1da71d8e7605320f5, type: 3}
-    count: 5
+  - enemy: {fileID: -5969522181487435239, guid: 822a7ff7d551d4124914ef9f886386b1,
+      type: 3}
+    count: 10
+    rate: 1
+  - enemy: {fileID: 3033535261608615289, guid: 2c4c67f523c88400d99014138a48e4d7, type: 3}
+    count: 20
     rate: 1
   gameStatus: {fileID: 1764930347}
   timeBetweenWaves: 2
@@ -1980,7 +2084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f394d806fbde4af3b324dd431803446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startLives: 1
+  startLives: 5
   startMoney: 100
 --- !u!114 &1764930347
 MonoBehaviour:

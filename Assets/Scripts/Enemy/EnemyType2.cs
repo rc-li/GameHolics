@@ -8,7 +8,7 @@ public class EnemyType2 : Enemy
     {
         maxHealth = 100;
         value = 20;
-        startSpeed = 2.0f;
+        startSpeed = 4.0f;
         speed = startSpeed;
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
