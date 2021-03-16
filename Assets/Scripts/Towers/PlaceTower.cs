@@ -51,7 +51,10 @@ public class PlaceTower : MonoBehaviour
             }
             else
             {
-                audioSource.PlayOneShot(noMoney);
+                if (PlayerStatus.selectTowerNumber != 0){
+                    audioSource.PlayOneShot(noMoney);
+                }
+                
             }
             //tower = (GameObject) Instantiate(PlayerStatus.towerPrefab, transform.position, Quaternion.identity);
             //Debug.Log(tower.GetComponent<Tower>().GetPrice());
