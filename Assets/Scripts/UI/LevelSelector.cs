@@ -26,9 +26,14 @@ public class LevelSelector : MonoBehaviour
         sceneFader.FadeToScene(levelName);
     }
 
+
+
     public void ResetLevel() {
         PlayerPrefs.SetInt("levelReached", 1);
         sceneFader.FadeToScene("LevelSelector");
     }
 
+    public void StartMenu() {
+        sceneFader.FadeToScene("StartMenu");
+    }
 }
