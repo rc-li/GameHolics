@@ -20,19 +20,19 @@ public static class CardDefiner
     }
     public static String getAnSSR()
     {
-        return "EnemyType1";
+        return "TowerType3";
     }
 
     public static String getAnSR()
     {
-        return "TowerType1";
+        return "TowerType2";
     }
     public static String getAnR()
     {
-        return "TowerType2";
+        return "TowerType1";
     }
     public static String getAnN()
     {
-        return "TowerType3";
+        return "EnemyType1";
     }
 }
