@@ -16,6 +16,11 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("CharacterCalling");
     }
 
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("StartMenu");
+    }
+
     public void QuitGame()
     {
         Application.Quit();

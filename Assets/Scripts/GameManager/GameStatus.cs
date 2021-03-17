@@ -47,7 +47,7 @@ public class GameStatus : MonoBehaviour
     {
         gameIsOver = true;
 
-        if (currentLevel < totalLevels + 1)
+        if (currentLevel < totalLevels + 2)
         {
             winLevelMenu.SetActive(true);
             SetNextLevel(currentLevel);
