@@ -16,7 +16,7 @@ public enum Rarity
 
 public static class CardRate
 {
-    public static int SSR_RATE = 1;
+    public static int SSR_RATE = 3;
     public static int SR_RATE = 6;
     public static int R_RATE = 26;
 
