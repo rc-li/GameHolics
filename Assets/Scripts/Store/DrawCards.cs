@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//这个是主页面的script
 public class DrawCards : MonoBehaviour
 {
     // Start is called before the first frame update
