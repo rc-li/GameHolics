@@ -10,7 +10,7 @@ public class GameStatus : MonoBehaviour
     private WinLevelMenu _winLevelMenu;
 
     public GameObject winGameMenu;
-    private int totalLevels = 2;
+    private int totalLevels = 4;
     public string nextLevelName;
 
     public GameObject gameOverMenu;
@@ -20,7 +20,6 @@ public class GameStatus : MonoBehaviour
     private void Start()
     {
         gameIsOver = false;
-        //这里hard code了，先凑合用
         currentLevel = SceneManager.GetActiveScene().buildIndex;
         System.Console.WriteLine(currentLevel);
     }
@@ -47,7 +46,7 @@ public class GameStatus : MonoBehaviour
     {
         gameIsOver = true;
 
-        if (currentLevel < totalLevels + 1)
+        if (currentLevel < totalLevels)
         {
             winLevelMenu.SetActive(true);
             SetNextLevel(currentLevel);
@@ -55,15 +54,15 @@ public class GameStatus : MonoBehaviour
 
         else if (currentLevel == totalLevels)
         {
-             WinGame();
+            WinGame();
         }
-        
+
     }
 
     public void SetNextLevel(int _currentLevel)
     {
         int nextLevel = _currentLevel + 1;
-        PlayerPrefs.SetInt("levelReached", nextLevel);
+        PlayerPrefs.SetInt("levelReached", nextLevel - 2);
         nextLevelName = GetSceneNameByBuildIndex(nextLevel);
         // Debug.Log("nextLevelName:" + nextLevelName);
     }

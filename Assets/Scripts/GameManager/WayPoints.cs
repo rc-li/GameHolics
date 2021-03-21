@@ -4,13 +4,54 @@ using UnityEngine;
 
 public class WayPoints : MonoBehaviour
 {
-    public static Transform[] wayPoints;
-    void Awake()
+    public Color rayColor = Color.white;
+    public List<Transform> pathObjs = new List<Transform>();
+    public Transform[] wayPoints;
+
+    private void OnDrawGizmos()
     {
-        wayPoints = new Transform[transform.childCount];
-        for (int i = 0; i < wayPoints.Length; i++)
+
+        Gizmos.color = rayColor;
+        wayPoints = GetComponentsInChildren<Transform>();
+        pathObjs.Clear();
+
+        foreach (Transform wayPoint in wayPoints)
         {
-            wayPoints[i] = transform.GetChild(i);
+            if (wayPoint != this.transform)
+            {
+                pathObjs.Add(wayPoint);
+            }
+        }
+
+        for (int i = 0; i < pathObjs.Count; i++)
+        {
+            Vector3 currentPoint = pathObjs[i].position;
+            Gizmos.DrawWireSphere(currentPoint, 0.3f);
+
+
+            if (i > 0)
+            {
+                Vector3 prePoint = pathObjs[i - 1].position;
+                Gizmos.DrawLine(prePoint, currentPoint);
+            }
         }
     }
+
+
+
+
+
+
+
+
+
+    // public static Transform[] wayPoints;
+    // void Awake()
+    // {
+    //     wayPoints = new Transform[transform.childCount];
+    //     for (int i = 0; i < wayPoints.Length; i++)
+    //     {
+    //         wayPoints[i] = transform.GetChild(i);
+    //     }
+    // }
 }
