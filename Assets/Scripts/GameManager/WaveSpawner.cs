@@ -3,32 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class WaveSpawner : MonoBehaviour
 {
     public static int aliveEnemyNumber;
-
     public Transform[] spawnPoints;
     public Wave[] waves;
     public GameStatus gameStatus;
-
     public float timeBetweenWaves = 5.0f;
-    private float countdown = 2.0f;
-    private int waveIndex = 0;
+    public float countdown = 2.0f;
+    public int waveIndex = 0;
     public static int randomSpawn;
+    private Text waveCountdownText;
 
-    // public Text waveCountdownText;
-
+    private void Awake()
+    {
+        Text[] topCanvasTexts = GameObject.Find("TopCanvas").GetComponentsInChildren<Text>();
+        foreach (var text in topCanvasTexts)
+        {
+            if (text.name == "waveCountdownText")
+            {
+                waveCountdownText = text;
+                return;
+            }
+        }
+    }
     private void Start()
     {
         aliveEnemyNumber = 0;
-        // spawnPoints = GetComponentInChildren<Transform>();
     }
 
     private void Update()
     {
-        Debug.Log(aliveEnemyNumber);
-
+        // Debug.Log(aliveEnemyNumber);
         if (aliveEnemyNumber > 0)
         {
             return;
@@ -39,7 +45,7 @@ public class WaveSpawner : MonoBehaviour
             //if there is no sceneFader at next level, It means we have reached last level (prevent NPE problem for now, it can be modified later)
             // if (gameStatus.sceneFader != null)
             gameStatus.WinLevel();
-            Debug.Log("win_level");
+            // Debug.Log("win_level");
             enabled = false;
             return;
         }
@@ -54,7 +60,7 @@ public class WaveSpawner : MonoBehaviour
         countdown -= Time.deltaTime;
 
         countdown = Mathf.Clamp(countdown, 0.0f, Mathf.Infinity);
-        // waveCountdownText.text = string.Format("{0:00.00}", countdown);
+        waveCountdownText.text = string.Format("NEXT WAVE  {0:00.00}", countdown);
     }
 
     IEnumerator SpawnWave()
@@ -82,6 +88,5 @@ public class WaveSpawner : MonoBehaviour
         // int Random.Range Return a random int within [minInclusive..maxExclusive) (Read Only)
         randomSpawn = Random.Range(0, spawnPoints.Length);
         Instantiate(enemy, spawnPoints[randomSpawn].position, spawnPoints[randomSpawn].rotation);
-        // aliveEnemyNumber++;
     }
 }
