@@ -23,6 +23,7 @@ public class GameStatus : MonoBehaviour
         //这里hard code了，先凑合用
         currentLevel = SceneManager.GetActiveScene().buildIndex;
         System.Console.WriteLine(currentLevel);
+        //GlobalInitializer.readCardConfiguration();
     }
 
     private void Update()

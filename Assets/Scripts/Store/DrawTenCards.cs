@@ -16,7 +16,7 @@ public enum Rarity
 
 public static class CardRate
 {
-    public static int SSR_RATE = 3;
+    public static int SSR_RATE = 1;
     public static int SR_RATE = 6;
     public static int R_RATE = 26;
 
@@ -97,21 +97,14 @@ public class DrawTenCards : MonoBehaviour
 
         Transform[] cards = new Transform[transform.childCount];
 
-        Rarity[] drawResult = CardRate.DrawTenCards();
+        Rarity[] rarityResult = CardRate.DrawTenCards();
+        string[] drawResult = Cards.getTenCards(rarityResult);
 
         for (int i = 0; i < 10; i++)
         {
-            string cardPath = CardDefiner.GetACard(drawResult[i]);
+            string cardPath = Cards.getDictionaryByRarity(rarityResult[i])[drawResult[i]];
             images[i].sprite = Resources.Load(cardPath, typeof(Sprite)) as Sprite;
         }
-        //card0.sprite = Resources.Load("EnemyType1", typeof(Sprite)) as Sprite;
-        //card1.sprite = Resources.Load("EnemyType1", typeof(Sprite)) as Sprite;
-        //for(int i = 0; i < 10; i++)
-        //{
-        //    GameObject gameObject = GameObject.Find("C" + i);
-
-        //
-        //Transform gameObject = transform.Find("Card").Find("Front");
 
         for (var i = 0; i < transform.childCount; i++)
         {
@@ -119,18 +112,7 @@ public class DrawTenCards : MonoBehaviour
             cards[i] = card;
         }
 
-        foreach (Transform card in cards)
-        {
-            //card.GetComponent
-        }
-        //gameObject.GetComponent("Card").GetComponent;
-        //GameObject gameObject = GameObject.Find("C0");
-        //gameObject.transform.SetPositionAndRotation(new Vector3(0, 0, 0), gameObject.transform.rotation);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        Debug.Log(GlobalPlayer.cards);
+        Console.WriteLine(GlobalPlayer.cards);
     }
 }
