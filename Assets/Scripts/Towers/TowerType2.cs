@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// type2: iceball damage-slow down tower
+
 public class TowerType2 : Tower
 {
     public void Start()

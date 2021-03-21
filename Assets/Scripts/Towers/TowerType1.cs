@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// type1: basic damage tower
+
 public class TowerType1 : Tower
 {
     public void Start()
