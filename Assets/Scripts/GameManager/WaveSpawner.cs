@@ -8,23 +8,27 @@ public class WaveSpawner : MonoBehaviour
 {
     public static int aliveEnemyNumber;
 
-    public Transform spawnPoint;
+    public Transform[] spawnPoints;
     public Wave[] waves;
     public GameStatus gameStatus;
 
     public float timeBetweenWaves = 5.0f;
     private float countdown = 2.0f;
     private int waveIndex = 0;
+    public static int randomSpawn;
 
     // public Text waveCountdownText;
 
     private void Start()
     {
         aliveEnemyNumber = 0;
+        // spawnPoints = GetComponentInChildren<Transform>();
     }
 
     private void Update()
     {
+        Debug.Log(aliveEnemyNumber);
+
         if (aliveEnemyNumber > 0)
         {
             return;
@@ -34,20 +38,11 @@ public class WaveSpawner : MonoBehaviour
         {
             //if there is no sceneFader at next level, It means we have reached last level (prevent NPE problem for now, it can be modified later)
             // if (gameStatus.sceneFader != null)
-            // {
             gameStatus.WinLevel();
+            Debug.Log("win_level");
             enabled = false;
             return;
-            // } 
-            // return;
         }
-
-        // if (waveIndex <= waves.Length && PlayerStatus.lives <= 0)
-        // {
-        //     gameStatus.GameOver();
-        //     enabled = false;
-        //     return;
-        // }
 
         if (countdown <= 0.0f)
         {
@@ -66,8 +61,6 @@ public class WaveSpawner : MonoBehaviour
     {
         PlayerStatus.Rounds++;
         Wave wave = waves[waveIndex];
-        //Fixed previous spawner bug, initialize the aliveNumber as 0
-        // aliveEnemyNumber = 0;
         aliveEnemyNumber = wave.count;
 
 
@@ -86,7 +79,9 @@ public class WaveSpawner : MonoBehaviour
 
     void SpawnEnemy(Enemy enemy)
     {
-        Instantiate(enemy, spawnPoint.position, spawnPoint.rotation);
+        // int Random.Range Return a random int within [minInclusive..maxExclusive) (Read Only)
+        randomSpawn = Random.Range(0, spawnPoints.Length);
+        Instantiate(enemy, spawnPoints[randomSpawn].position, spawnPoints[randomSpawn].rotation);
         // aliveEnemyNumber++;
     }
 }

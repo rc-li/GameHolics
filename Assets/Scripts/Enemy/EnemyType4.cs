@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class EnemyType4 : Enemy
 {
-    // Start is called before the first frame update
     void Start()
     {
         maxHealth = 600;
         value = 25;
-        startSpeed = 1.2f;
+        startSpeed = 3f;
         speed = startSpeed;
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
 
-      
+
     }
 }
