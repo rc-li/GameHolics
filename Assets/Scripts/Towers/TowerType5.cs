@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// type3: fireball damage tower
+// type5: non-bullet explosion tower
 
-public class TowerType3 : Tower
+public class TowerType5 : Tower
 {
     public void Start()
     {
@@ -26,3 +26,5 @@ public class TowerType3 : Tower
         }
     }
 }
+
+
