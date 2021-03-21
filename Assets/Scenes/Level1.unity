@@ -371,11 +371,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1699121586413215265, guid: 2c62a956eb8924a3986f02b7478ec8bc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1295522160}
     - target: {fileID: 1699121586413215266, guid: 2c62a956eb8924a3986f02b7478ec8bc,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -396,11 +391,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1699121587637817722, guid: 2c62a956eb8924a3986f02b7478ec8bc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1295522158}
     - target: {fileID: 1699121587637817724, guid: 2c62a956eb8924a3986f02b7478ec8bc,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -420,13 +410,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1699121587732844168, guid: 2c62a956eb8924a3986f02b7478ec8bc,
-        type: 3}
-      propertyPath: m_Text
-      value: '$110
-
-'
       objectReference: {fileID: 0}
     - target: {fileID: 1699121587785929834, guid: 2c62a956eb8924a3986f02b7478ec8bc,
         type: 3}
@@ -538,26 +521,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TopCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 1699121587785929838, guid: 2c62a956eb8924a3986f02b7478ec8bc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1699121587953117227, guid: 2c62a956eb8924a3986f02b7478ec8bc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1764930348}
-    - target: {fileID: 1699121587953117227, guid: 2c62a956eb8924a3986f02b7478ec8bc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Toggle
-      objectReference: {fileID: 0}
-    - target: {fileID: 1699121588063678701, guid: 2c62a956eb8924a3986f02b7478ec8bc,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1295522159}
     - target: {fileID: 1699121588063678703, guid: 2c62a956eb8924a3986f02b7478ec8bc,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1488,10 +1451,18 @@ MonoBehaviour:
   - {fileID: 1277554568}
   waves:
   - enemy: {fileID: 3033535261608615289, guid: 2c4c67f523c88400d99014138a48e4d7, type: 3}
-    count: 9
+    count: 3
+    rate: 1
+  - enemy: {fileID: 3033535261608615289, guid: 2c4c67f523c88400d99014138a48e4d7, type: 3}
+    count: 3
+    rate: 1
+  - enemy: {fileID: 3033535261608615289, guid: 2c4c67f523c88400d99014138a48e4d7, type: 3}
+    count: 3
     rate: 1
   gameStatus: {fileID: 1764930347}
   timeBetweenWaves: 3
+  countdown: 2
+  waveIndex: 0
 --- !u!4 &1764930345
 Transform:
   m_ObjectHideFlags: 0
