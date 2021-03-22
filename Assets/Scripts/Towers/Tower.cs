@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    protected Transform target;
-    protected string enemyTag = "Enemy";
-    // private Enemy targetEnemy;
     protected int price = 0;
     protected float range; // tower shooting range
     protected float fireRate; // bullet number shooted per second
     protected float fireCountdown = 0.0f; // timer
+    protected GameObject target;
+    protected List<GameObject> targetEnemies = new List<GameObject>();
+    protected string enemyTag = "Enemy";
+
 
     [Header("Setup")]
     public Transform firePoint;
@@ -40,8 +41,9 @@ public class Tower : MonoBehaviour
     // locate enemy
     void UpdateTarget()
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
+        targetEnemies.Clear();
         float shortestDistance = Mathf.Infinity;
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
         GameObject nearestEnemy = null;
         foreach (GameObject enemy in enemies)
         {
@@ -51,13 +53,21 @@ public class Tower : MonoBehaviour
                 shortestDistance = distanceToEnemy;
                 nearestEnemy = enemy;
             }
+
+            if (distanceToEnemy <= range)
+            {
+                targetEnemies.Add(enemy);
+            }
+
+            if (distanceToEnemy > range)
+            {
+                targetEnemies.Remove(enemy);
+            }
         }
 
         if (nearestEnemy != null && shortestDistance < range)
         {
-            target = nearestEnemy.transform;
-            // targetEnemy = nearestEnemy.GetComponent<Enemy>();
-
+            target = nearestEnemy;
         }
         else
         {
@@ -65,18 +75,38 @@ public class Tower : MonoBehaviour
         }
     }
 
+    // void UpdateTargets()
+    // {
+    //     targetEnemies.Clear();
+    //     GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
+    //     foreach (GameObject enemy in enemies)
+    //     {
+    //         float distanceToEnemy = Vector2.Distance(transform.position, enemy.transform.position);
+    //         if (distanceToEnemy <= range)
+    //         {
+    //             targetEnemies.Add(enemy);
+    //         }
+
+    //         if (distanceToEnemy > range)
+    //         {
+    //             targetEnemies.Remove(enemy);
+    //         }
+    //     }
+    //     Debug.Log("enemies list: " + targetEnemies.Count);
+    // }
+
     protected virtual void Shoot()
     {
         // "object casting": create a temporary gameObject for Instantiate object
-        GameObject bulletInst = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Bullet bullet = bulletInst.GetComponent<Bullet>();
+        // GameObject bulletInst = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        // Bullet bullet = bulletInst.GetComponent<Bullet>();
 
-        if (bullet != null)
-        {
-            bullet.LocateTarget(target);
-            // shooting audio
-            bullet.GetComponent<AudioSource>().Play();
-        }
+        // if (bullet != null)
+        // {
+        //     bullet.LocateTarget(target);
+        //     // shooting audio
+        //     bullet.GetComponent<AudioSource>().Play();
+        // }
     }
 
 

@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    protected Transform target;
+    protected GameObject target;
+    protected Transform startPoint;
 
     protected float speed;
     protected int damage;
     protected float slowPercent;
 
-    public void LocateTarget(Transform _target)
+    private void Start()
+    {
+        startPoint = transform;
+    }
+    public void LocateTarget(GameObject _target)
     {
         target = _target;
     }
@@ -23,18 +28,22 @@ public class Bullet : MonoBehaviour
             return;
         }
 
-        Vector2 direction = target.position - transform.position;
+        Vector2 direction = target.transform.position - transform.position;
         float distanceThisFrame = speed * Time.deltaTime;
+        // float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
 
         // to make sure we can touch the target in this frame
         // direction.magnitude -> the length of direction vector
-        if (direction.magnitude <= distanceThisFrame)
+        // if (direction.magnitude <= distanceThisFrame)
+        if (Vector2.Distance(gameObject.transform.position, target.transform.position) <= distanceThisFrame)
         {
             HitTarget();
             return;
         }
 
         transform.Translate(direction.normalized * distanceThisFrame, Space.World);
+        // gameObject.GetComponent<Rigidbody2D>().rotation = angle;
     }
 
     protected virtual void HitTarget()

@@ -8,11 +8,12 @@ public class EnemyType3 : Enemy
     void Start()
     {
         maxHealth = 200;
-        value = 12;
         startSpeed = 2.0f;
         speed = startSpeed;
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
+        value = 12;
+        attackPoint = 10;
 
     }
 

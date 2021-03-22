@@ -7,13 +7,12 @@ public class EnemyType2 : Enemy
     void Start()
     {
         maxHealth = 100;
-        value = 20;
         startSpeed = 4.0f;
         speed = startSpeed;
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
-
-        // Debug.Log("type2 enemy start function");
+        value = 20;
+        attackPoint = 10;
     }
 
 }

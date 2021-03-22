@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class TowerType3 : Tower
 {
+
+
     public void Start()
     {
         range = 3.0f;
