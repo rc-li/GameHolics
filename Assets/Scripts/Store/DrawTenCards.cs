@@ -83,6 +83,8 @@ public class DrawTenCards : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Unity 渲染asset的顺序是从上到下，所以说
+        //卡牌的初始化要在所有卡牌asset后面的asset的script里面完成
         Image[] images = new Image[10];
         images[0] = card0;
         images[1] = card1;
