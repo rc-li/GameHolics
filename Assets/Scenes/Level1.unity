@@ -605,6 +605,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: TopCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1699121587953117227, guid: 2c62a956eb8924a3986f02b7478ec8bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1764930348}
+    - target: {fileID: 1699121587953117227, guid: 2c62a956eb8924a3986f02b7478ec8bc,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Toggle
+      objectReference: {fileID: 0}
     - target: {fileID: 1699121588063678703, guid: 2c62a956eb8924a3986f02b7478ec8bc,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1719,7 +1729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f394d806fbde4af3b324dd431803446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startLives: 10
+  startLives: 100
   startMoney: 100
 --- !u!114 &1764930347
 MonoBehaviour:
