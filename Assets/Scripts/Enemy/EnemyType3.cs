@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyType3 : Enemy
 {
-    // Start is called before the first frame update
     void Start()
     {
         maxHealth = 200;
@@ -14,8 +13,5 @@ public class EnemyType3 : Enemy
         healthbar.SetMaxHealth(maxHealth);
         value = 12;
         attackPoint = 10;
-
     }
-
-
 }

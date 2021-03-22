@@ -355,18 +355,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aaa88632b3c584d20b6843cf2a4de79e, type: 3}
---- !u!114 &269379591 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 929073748467665748, guid: 746b26292b40c43449bda3de9b75e7ee,
-    type: 3}
-  m_PrefabInstance: {fileID: 1735016497}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98549d4bb5fea441a831909448b59c5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &269742856
 GameObject:
   m_ObjectHideFlags: 0
@@ -1691,10 +1679,7 @@ MonoBehaviour:
     count: 20
     rate: 3
   - enemy: {fileID: 3033535261608615289, guid: 2c4c67f523c88400d99014138a48e4d7, type: 3}
-    count: 3
-    rate: 1
-  - enemy: {fileID: 3033535261608615289, guid: 2c4c67f523c88400d99014138a48e4d7, type: 3}
-    count: 3
+    count: 20
     rate: 1
   gameStatus: {fileID: 1764930347}
   timeBetweenWaves: 3
@@ -1743,10 +1728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 724ce137c9d6e418ea587532ede6f4f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winLevelMenu: {fileID: 1909167411}
-  winGameMenu: {fileID: 1909167410}
   nextLevelName: 
-  gameOverMenu: {fileID: 1909167409}
   currentLevelName: 
 --- !u!114 &1764930348
 MonoBehaviour:
@@ -1760,8 +1742,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbca43b4b13324d03ae5b5865ea52798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 1909167412}
-  sceneFader: {fileID: 269379591}
 --- !u!114 &1764930349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1774,9 +1754,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581d2ce9933a94ec9b63897f330f8a2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneFader: {fileID: 269379591}
-  winLevelMenu: {fileID: 1909167411}
-  gameStatus: {fileID: 1764930347}
 --- !u!114 &1764930350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1789,8 +1766,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1a461e1342024fb0b6806a6624184a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneFader: {fileID: 269379591}
-  winGameMenu: {fileID: 1909167410}
 --- !u!114 &1764930351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1803,9 +1778,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e298abee759c64fd891df1d15ccc09c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneFader: {fileID: 269379591}
-  gameStatus: {fileID: 1764930347}
-  gameOverMenu: {fileID: 1909167409}
 --- !u!1001 &1909167408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2110,30 +2082,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e933742310cb4517b92835d3505c6ac, type: 3}
---- !u!1 &1909167409 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4500025375931097129, guid: 9e933742310cb4517b92835d3505c6ac,
-    type: 3}
-  m_PrefabInstance: {fileID: 1909167408}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1909167410 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3618269001168348669, guid: 9e933742310cb4517b92835d3505c6ac,
-    type: 3}
-  m_PrefabInstance: {fileID: 1909167408}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1909167411 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3618269000602757533, guid: 9e933742310cb4517b92835d3505c6ac,
-    type: 3}
-  m_PrefabInstance: {fileID: 1909167408}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1909167412 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3618268999947891343, guid: 9e933742310cb4517b92835d3505c6ac,
-    type: 3}
-  m_PrefabInstance: {fileID: 1909167408}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2032887327
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2,10 +2,17 @@
 
 public class WinLevelMenu : MonoBehaviour
 {
-    public SceneFader sceneFader;
-    public GameObject winLevelMenu;
-    public GameStatus gameStatus;
+    private SceneFader sceneFader;
+    private GameStatus gameStatus;
+    private GameObject winLevelMenu;
     private string mainMenu = "LevelSelector";
+
+    private void Awake()
+    {
+        sceneFader = GameObject.Find("SceneFader").GetComponent<SceneFader>();
+        gameStatus = GameObject.Find("GameManager").GetComponent<GameStatus>();
+        winLevelMenu = GameObject.Find("WinLevelMenu");
+    }
 
     private void Start()
     {

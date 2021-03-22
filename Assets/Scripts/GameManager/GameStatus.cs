@@ -3,19 +3,22 @@ using UnityEngine.SceneManagement;
 
 public class GameStatus : MonoBehaviour
 {
-
-    public static bool gameIsOver;
-
-    public GameObject winLevelMenu;
+    private GameObject winLevelMenu;
     private WinLevelMenu _winLevelMenu;
-
-    public GameObject winGameMenu;
+    private GameObject winGameMenu;
+    private GameObject gameOverMenu;
+    public static bool gameIsOver;
     private int totalLevels = 4;
     public string nextLevelName;
-
-    public GameObject gameOverMenu;
     public string currentLevelName;
     private int currentLevel;
+
+    private void Awake()
+    {
+        winLevelMenu = GameObject.Find("WinLevelMenu");
+        winGameMenu = GameObject.Find("WinGameMenu");
+        gameOverMenu = GameObject.Find("GameOverMenu");
+    }
 
     private void Start()
     {

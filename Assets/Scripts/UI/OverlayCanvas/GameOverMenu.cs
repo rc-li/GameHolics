@@ -5,20 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class GameOverMenu : MonoBehaviour
 {
-    public SceneFader sceneFader;
-    public GameStatus gameStatus;
-    public GameObject gameOverMenu;
+    private SceneFader sceneFader;
+    private GameStatus gameStatus;
+    private GameObject gameOverMenu;
     private string mainMenu = "LevelSelector";
 
-    private void Start() {
+    private void Awake()
+    {
+        sceneFader = GameObject.Find("SceneFader").GetComponent<SceneFader>();
+        gameStatus = GameObject.Find("GameManager").GetComponent<GameStatus>();
+        gameOverMenu = GameObject.Find("GameOverMenu");
+    }
+
+    private void Start()
+    {
         gameOverMenu.SetActive(false);
     }
-    
-    public void Restart() {
+
+    public void Restart()
+    {
         sceneFader.FadeToScene(gameStatus.currentLevelName);
     }
 
-    public void Menu() {
+    public void Menu()
+    {
         sceneFader.FadeToScene(mainMenu);
     }
 }
