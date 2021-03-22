@@ -6,10 +6,10 @@ public class PlayerStatus : MonoBehaviour
 {
 
     public static int lives;
-    public int startLives = 10;
+    public static int startLives = 20;
 
     public static int money;
-    public int startMoney = 100;
+    public static int startMoney = 100;
 
     public static int Rounds;
 
@@ -18,8 +18,10 @@ public class PlayerStatus : MonoBehaviour
 
     void Start()
     {
-        lives = startLives;
-        money = startMoney;
+
+        lives = GlobalPlayer.hp;
+        
+        money = GlobalPlayer.money; //startMoney;
         Rounds = 0;
         towerPrefab = null;
     }
