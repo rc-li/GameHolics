@@ -14,18 +14,23 @@ public static class GlobalInitializer
             switch (strs[2])
             {
                 case "SSR":
-                    Cards.SSR.Add(strs[0], strs[1]);
+                    if(!Cards.SSR.ContainsKey(strs[0]))
+                        Cards.SSR.Add(strs[0], strs[1]);
                     break;
                 case "SR":
-                    Cards.SR.Add(strs[0], strs[1]);
+                    if (!Cards.SR.ContainsKey(strs[0]))
+                        Cards.SR.Add(strs[0], strs[1]);
                     break;
                 case "R":
-                    Cards.R.Add(strs[0], strs[1]);
+                    if (!Cards.R.ContainsKey(strs[0]))
+                        Cards.R.Add(strs[0], strs[1]);
                     break;
                 case "N":
-                    Cards.N.Add(strs[0], strs[1]);
+                    if (!Cards.N.ContainsKey(strs[0]))
+                        Cards.N.Add(strs[0], strs[1]);
                     break;
                 default:
+
                     Console.WriteLine("Error! Unknown Card Type!");
                     break;
             }
