@@ -3,39 +3,53 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    private GameObject pauseMenu;
+    private SceneFader sceneFader;
+    private string mainMenu = "LevelSelector";
 
-    public GameObject pauseMenu;
-    public SceneFader sceneFader;
 
-    private void Start() {
+    private void Awake()
+    {
+        sceneFader = GameObject.Find("SceneFader").GetComponent<SceneFader>();
+        pauseMenu = GameObject.Find("PauseMenu");
+    }
+
+    private void Start()
+    {
         pauseMenu.SetActive(false);
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
             Toggle();
-        }    
+        }
     }
 
-    public void Toggle() {
+    public void Toggle()
+    {
         pauseMenu.SetActive(!pauseMenu.activeSelf);
 
-        if (pauseMenu.activeSelf) {
+        if (pauseMenu.activeSelf)
+        {
             Time.timeScale = 0.0f;
-        } else {
+        }
+        else
+        {
             Time.timeScale = 1.0f;
         }
     }
 
-    public void Restart() {
+    public void Restart()
+    {
         Toggle();
         sceneFader.FadeToScene(SceneManager.GetActiveScene().name);
     }
 
-    public void Menu() {
-        // will change to main menu afterwards
+    public void Menu()
+    {
         Toggle();
-        sceneFader.FadeToScene("LevelSelector");
+        sceneFader.FadeToScene(mainMenu);
     }
 }
