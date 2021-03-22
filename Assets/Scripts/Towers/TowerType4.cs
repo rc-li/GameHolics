@@ -2,41 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// type4: defense potato tower
-
+// type4: bewitching tower
 public class TowerType4 : Tower
 {
-
-    public HealthBar healthbar;
-    private int maxHealth;
-    private int currentHealth;
-
     public void Start()
     {
-        maxHealth = 100;
-        currentHealth = maxHealth;
-        healthbar.SetMaxHealth(maxHealth);
+        range = 3.0f;
+        fireRate = 0.5f;  // speed = 1/0.5f
+        InvokeRepeating("UpdateTarget", 0.0f, 0.5f); // invoke UpdateTarget() every 0.5 seconds starts from 0 second
     }
 
-    public void TowerTakeDamage(int damage)
+    protected override void Shoot()
     {
-        currentHealth -= damage;
-        healthbar.SetCurrentHealth(currentHealth);
+        GameObject bulletInst = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Bullet bullet = bulletInst.GetComponent<BulletType4>();
 
-        if (currentHealth <= 0)
+        if (bullet != null)
         {
-            Die();
+            bullet.LocateTarget(target);
+            // shooting audio
+            bullet.GetComponent<AudioSource>().Play();
         }
     }
-
-    public void Die()
-    {
-        Destroy(gameObject);
-
-        // new type - audio update required
-        // death audio
-        // AudioSource audioSource = gameObject.GetComponent<AudioSource>();
-        // AudioSource.PlayClipAtPoint(audioSource.clip, transform.position);
-    }
 }
-

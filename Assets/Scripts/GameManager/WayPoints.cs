@@ -8,6 +8,9 @@ public class WayPoints : MonoBehaviour
     public List<Transform> pathObjs = new List<Transform>();
     public Transform[] wayPoints;
 
+    // private void Awake()
+    // {
+
     private void OnDrawGizmos()
     {
 
@@ -36,22 +39,18 @@ public class WayPoints : MonoBehaviour
             }
         }
     }
-
-
-
-
-
-
-
-
-
-    // public static Transform[] wayPoints;
-    // void Awake()
-    // {
-    //     wayPoints = new Transform[transform.childCount];
-    //     for (int i = 0; i < wayPoints.Length; i++)
-    //     {
-    //         wayPoints[i] = transform.GetChild(i);
-    //     }
-    // }
 }
+
+//    public static Transform[] pathObjs;
+//     void Awake()
+//     {
+//         pathObjs = new Transform[transform.childCount];
+//         for (int i = 0; i < pathObjs.Length; i++)
+//         {
+//             pathObjs[i] = transform.GetChild(i);
+//         }
+//     }
+
+
+
+

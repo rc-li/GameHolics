@@ -6,10 +6,10 @@ public class Enemy : MonoBehaviour
 {
     protected int maxHealth;
     protected int currentHealth;
-    protected int value;
     protected float startSpeed;
-
     public float speed;
+    protected int value;
+    public int attackPoint;
     public HealthBar healthbar;
     private bool isDead = false;
 
@@ -27,6 +27,15 @@ public class Enemy : MonoBehaviour
     public void SlowDown(float slowPercent)
     {
         speed = startSpeed * (1f - slowPercent);
+    }
+
+    public void WalkBack(bool isBewitched = false)
+    {
+        if (isBewitched == true)
+        {
+            gameObject.GetComponent<EnemyMovement>().enabled = false;
+            gameObject.GetComponent<EnemyMovementBack>().enabled = true;
+        }
     }
 
     public void Die()
