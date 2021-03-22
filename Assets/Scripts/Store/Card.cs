@@ -10,7 +10,7 @@ public class Card : MonoBehaviour
     void Start()
     {
         //image.sprite = Resources.Load("EnemyType1", typeof(Sprite)) as Sprite;
-        Debug.Log(image);
+        //Debug.Log(image);
     }
 
     // Update is called once per frame

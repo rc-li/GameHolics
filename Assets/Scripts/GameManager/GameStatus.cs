@@ -20,7 +20,10 @@ public class GameStatus : MonoBehaviour
     private void Start()
     {
         gameIsOver = false;
+        //这里hard code了，先凑合用
         currentLevel = SceneManager.GetActiveScene().buildIndex;
+        System.Console.WriteLine(currentLevel);
+        //GlobalInitializer.readCardConfiguration();
     }
 
     private void Update()
@@ -45,7 +48,7 @@ public class GameStatus : MonoBehaviour
     {
         gameIsOver = true;
 
-        if (currentLevel < totalLevels)
+        if (currentLevel < totalLevels + 1)
         {
             winLevelMenu.SetActive(true);
             SetNextLevel(currentLevel);

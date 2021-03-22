@@ -6,8 +6,8 @@ public class BulletType3 : Bullet
 {
     void Start()
     {
-        speed = 4.0f;
-        damage = 30;
+        speed = 3.0f;
+        damage = 100;
     }
 
     protected override void HitTarget()
