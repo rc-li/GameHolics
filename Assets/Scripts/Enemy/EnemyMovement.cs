@@ -10,6 +10,9 @@ public class EnemyMovement : MonoBehaviour
     private float switchPointDistance = 0.1f;
     private GameObject destination;
     public Transform target;
+    private Vector3 _lastPointPosition;
+    private SpriteRenderer _spriteRenderer;
+    public Vector3 CurrentPointPosition;
     // Rigidbody2D rbody;
 
 
@@ -28,12 +31,15 @@ public class EnemyMovement : MonoBehaviour
 
     void Start()
     {
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         target = wayPoints.pathObjs[0];
+        _lastPointPosition = transform.position;
     }
 
     void Update()
     {
-        float distance = Vector2.Distance(target.position, transform.position);
+        CurrentPointPosition = target.position;
+        //float distance = Vector2.Distance(target.position, transform.position);
         // transform.position = Vector2.MoveTowards(transform.position, target.position, Time.deltaTime * enemy.speed);
         Vector2 direction = target.position - transform.position;
         transform.Translate(direction.normalized * enemy.speed * Time.deltaTime, Space.World);
@@ -49,8 +55,8 @@ public class EnemyMovement : MonoBehaviour
         // Vector2 direction = nextPosition - transform.position;
         // float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         // transform.rotation = Quaternion.AngleAxis(angle, Vector2.forward);
-
-        if (distance <= switchPointDistance)
+        Rotate();
+        if (CurrentPointPositionReached())
         {
             GetNextWayPoint();
         }
@@ -59,6 +65,31 @@ public class EnemyMovement : MonoBehaviour
         {
             enabled = false;
         }
+    }
+
+    private bool CurrentPointPositionReached()
+    {
+        float distance = Vector2.Distance(target.position, transform.position);
+        if (distance <= switchPointDistance)
+        {
+            _lastPointPosition = transform.position;
+            return true;
+        }
+        return false;
+
+    }
+
+    private void Rotate()
+    {
+        if (CurrentPointPosition.x > _lastPointPosition.x)
+        {
+            _spriteRenderer.flipX = false;
+        }
+        else
+        {
+            _spriteRenderer.flipX = true;
+        }
+
     }
 
     void GetNextWayPoint()

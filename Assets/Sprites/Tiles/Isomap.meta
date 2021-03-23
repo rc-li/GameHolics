@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Sprites/Tiles/Isomap.meta
 guid: 819ce2ba21ca449729e7e805b0c251de
+=======
+guid: 8fce5dcdcdda14b3d848ada4be444bcc
+>>>>>>> master:Assets/Fantasy Wooden GUI  Free.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

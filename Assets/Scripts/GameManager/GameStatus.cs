@@ -25,6 +25,7 @@ public class GameStatus : MonoBehaviour
         gameIsOver = false;
         currentLevel = SceneManager.GetActiveScene().buildIndex;
         System.Console.WriteLine(currentLevel);
+        //GlobalInitializer.readCardConfiguration();
     }
 
     private void Update()
