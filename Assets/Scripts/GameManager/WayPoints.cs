@@ -7,10 +7,16 @@ public class WayPoints : MonoBehaviour
     public Color rayColor = Color.white;
     public List<Transform> pathObjs = new List<Transform>();
     public Transform[] wayPoints;
+    public Vector3 CurrentPosition => _currentPosition;
+    private Vector3 _currentPosition;
+	private void Start()
+	{
+        _currentPosition = transform.position;
+	}
 
     // private void Awake()
     // {
-
+    
     private void OnDrawGizmos()
     {
 

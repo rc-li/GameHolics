@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: bb31ee5b6e85a6c459200cb7851d6051, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.7692308, y: 0.7692308}
@@ -213,6 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  attackPoint: 0
   healthbar: {fileID: 2583373037229042530}
 --- !u!1001 &5278779625741292069
 PrefabInstance:
