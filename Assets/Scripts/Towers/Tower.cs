@@ -123,5 +123,12 @@ public class Tower : MonoBehaviour
     {
         return price;
     }
+
+    void OnMouseDown() {
+        GameObject deleteButton = this.transform.Find("DeleteButton").gameObject;
+        if (deleteButton.activeSelf) deleteButton.SetActive(false);
+        else deleteButton.SetActive(true);
+    }
+
 }
 
