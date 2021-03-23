@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     public int attackPoint;
     public HealthBar healthbar;
     private bool isDead = false;
+    public int wayPointIndex = 0;
 
     public void TakeDamage(int damage)
     {
@@ -33,6 +34,7 @@ public class Enemy : MonoBehaviour
     {
         if (isBewitched == true)
         {
+            wayPointIndex = gameObject.GetComponent<EnemyMovement>().wayPointIndex;
             gameObject.GetComponent<EnemyMovement>().enabled = false;
             gameObject.GetComponent<EnemyMovementBack>().enabled = true;
         }

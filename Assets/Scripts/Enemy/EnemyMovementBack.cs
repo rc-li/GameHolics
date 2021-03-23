@@ -6,7 +6,7 @@ public class EnemyMovementBack : MonoBehaviour
 {
     private WayPoints wayPoints;
     private Enemy enemy;
-    private int wayPointIndex = 0;
+    private int wayPointIndex;
     private float switchPointDistance = 0.1f;
     private GameObject destination;
     private Transform target;
@@ -20,13 +20,14 @@ public class EnemyMovementBack : MonoBehaviour
         pathName = paths[WaveSpawner.randomSpawn].name;
         wayPoints = GameObject.Find(pathName).GetComponent<WayPoints>();
         destination = GameObject.Find("trojan");
+        this.enabled = false;
     }
 
     void Start()
     {
-        this.enabled = false;
         enemy = GetComponent<Enemy>();
-        target = wayPoints.pathObjs[0];
+        wayPointIndex = gameObject.GetComponent<Enemy>().wayPointIndex - 1;
+        target = wayPoints.pathObjs[wayPointIndex];
     }
 
     void Update()
@@ -35,7 +36,7 @@ public class EnemyMovementBack : MonoBehaviour
         // transform.position = Vector2.MoveTowards(transform.position, target.position, Time.deltaTime * enemy.speed);
         Vector2 direction = target.position - transform.position;
         transform.Translate(direction.normalized * enemy.speed * Time.deltaTime, Space.World);
-
+        Debug.Log("wayPointIndex: " + wayPointIndex);
         if (distance <= switchPointDistance)
         {
             GetPreviousWaypoint();

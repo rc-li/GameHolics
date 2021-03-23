@@ -6,10 +6,10 @@ public class EnemyMovement : MonoBehaviour
 {
     private WayPoints wayPoints;
     private Enemy enemy;
-    private int wayPointIndex = 0;
+    public int wayPointIndex = 0;
     private float switchPointDistance = 0.1f;
     private GameObject destination;
-    private Transform target;
+    public Transform target;
     private Vector3 _lastPointPosition;
     private SpriteRenderer _spriteRenderer;
     public Vector3 CurrentPointPosition;
@@ -68,16 +68,16 @@ public class EnemyMovement : MonoBehaviour
     }
 
     private bool CurrentPointPositionReached()
-	{
+    {
         float distance = Vector2.Distance(target.position, transform.position);
         if (distance <= switchPointDistance)
-		{
-			_lastPointPosition = transform.position;
-			return true;
-		}
-		return false;
+        {
+            _lastPointPosition = transform.position;
+            return true;
+        }
+        return false;
 
-	}
+    }
 
     private void Rotate()
     {
