@@ -6,10 +6,10 @@ public class EnemyMovement : MonoBehaviour
 {
     private WayPoints wayPoints;
     private Enemy enemy;
-    private int wayPointIndex = 0;
+    public int wayPointIndex = 0;
     private float switchPointDistance = 0.1f;
     private GameObject destination;
-    private Transform target;
+    public Transform target;
     // Rigidbody2D rbody;
 
 
