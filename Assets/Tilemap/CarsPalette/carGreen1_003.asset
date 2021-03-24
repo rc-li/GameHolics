@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: carBlack2_004
+  m_Name: carGreen1_003
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: e434af16a010d475e9e3d9aebe9fc137, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c5987b589776f4e0b8f7c53aede3f9c4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
