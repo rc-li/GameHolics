@@ -25,8 +25,13 @@ public class Hover : MonoBehaviour
 
     public void Activate(Sprite sprite)
     {
-        
+        spriteRenderer.enabled = true;
         this.spriteRenderer.sprite = sprite;
         //Debug.Log(sprite);
+    }
+
+    public void Deactivate()
+    {
+        spriteRenderer.enabled = false;
     }
 }
