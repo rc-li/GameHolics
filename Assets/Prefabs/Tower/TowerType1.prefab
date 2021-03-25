@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 7215644528679639722}
   - component: {fileID: 7215644528679639724}
   - component: {fileID: 7215644528679639723}
+  - component: {fileID: 7425004195202558662}
   m_Layer: 0
   m_Name: TowerType1
   m_TagString: Untagged
@@ -128,3 +129,16 @@ MonoBehaviour:
   firePoint: {fileID: 7215644528311108480}
   bulletPrefab: {fileID: 2893709064535535009, guid: 1260efd204b5741289ae6311bf02cbe6,
     type: 3}
+--- !u!114 &7425004195202558662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7215644528679639725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b22bb18e427c84c97bb829d4d7c9efea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPrefab: {fileID: 7215644528679639725}
