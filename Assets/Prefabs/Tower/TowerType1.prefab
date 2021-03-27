@@ -41,7 +41,6 @@ GameObject:
   - component: {fileID: 7215644528679639722}
   - component: {fileID: 7215644528679639724}
   - component: {fileID: 7215644528679639723}
-  - component: {fileID: 572272019408128145}
   m_Layer: 0
   m_Name: TowerType1
   m_TagString: Untagged
@@ -104,7 +103,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 8e4aace8ca26b4cef8709f767adecf7b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0552d382704384db582b606c342ffcd1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -130,32 +129,6 @@ MonoBehaviour:
   firePoint: {fileID: 7215644528311108480}
   bulletPrefab: {fileID: 2893709064535535009, guid: 1260efd204b5741289ae6311bf02cbe6,
     type: 3}
---- !u!61 &572272019408128145
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7215644528679639725}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.09396112, y: 0.92232734}
-  m_SpriteTilingProperty:
-    border: {x: 0.65000004, y: 0.34666666, z: 0.84000003, w: 0.15333334}
-    pivot: {x: 0.47247234, y: 0.2297869}
-    oldSize: {x: 3.4133334, y: 3.4133334}
-    newSize: {x: 2.85, y: 2.84}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.4133334, y: 3.4133334}
-  m_EdgeRadius: 0
 --- !u!1 &8291826411151427801
 GameObject:
   m_ObjectHideFlags: 0

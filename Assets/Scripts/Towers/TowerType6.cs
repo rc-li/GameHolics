@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class TowerType6 : Tower
 {
-
     public HealthBar healthbar;
     private int maxHealth;
     private int currentHealth;
