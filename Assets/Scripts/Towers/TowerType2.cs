@@ -5,6 +5,9 @@ using UnityEngine;
 // type2: iceball damage-slow down tower
 public class TowerType2 : Tower
 {
+
+    new public static int price = 50;
+
     public void Start()
     {
         range = 3.0f;

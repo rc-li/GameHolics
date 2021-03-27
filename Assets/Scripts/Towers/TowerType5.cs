@@ -7,6 +7,8 @@ using UnityEngine;
 public class TowerType5 : Tower
 {
     private int explosionTowerDamage = 500;
+    new public static int price = 150;
+
     public void Start()
     {
         range = 3.0f;
