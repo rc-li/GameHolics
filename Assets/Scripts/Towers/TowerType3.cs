@@ -6,8 +6,7 @@ using UnityEngine;
 
 public class TowerType3 : Tower
 {
-
-
+    new public static int price = 70;
     public void Start()
     {
         range = 3.0f;
