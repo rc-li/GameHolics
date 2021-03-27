@@ -9,6 +9,7 @@ public class PlaceTower : MonoBehaviour
     private GameObject tower;
     private AudioSource audioSource;
     public AudioClip noMoney;
+    private Hover hover;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,7 @@ public class PlaceTower : MonoBehaviour
 
     void OnMouseUp()
 	{
+        hover = GameObject.Find("Hover").GetComponent<Hover>();
         if (canPlaceTower())
         {
             if (PlayerStatus.selectTowerNumber == 1 && PlayerStatus.money >= SelectTowerType1.towerPrice)
@@ -56,6 +58,9 @@ public class PlaceTower : MonoBehaviour
                 }
                 
             }
+            
+            
+            hover.Deactivate();
             //tower = (GameObject) Instantiate(PlayerStatus.towerPrefab, transform.position, Quaternion.identity);
             //Debug.Log(tower.GetComponent<Tower>().GetPrice());
             //PlayerStatus.money -= tower.GetComponent<Tower>().GetPrice();
