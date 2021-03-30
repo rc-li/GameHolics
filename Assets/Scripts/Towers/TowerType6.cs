@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // type6: defense potato tower
-
 public class TowerType6 : Tower
 {
     public HealthBar healthbar;
     private int maxHealth;
     private int currentHealth;
-
     public void Start()
     {
         maxHealth = 100;

@@ -4,6 +4,8 @@ using UnityEngine;
 using DG.Tweening;//别忘了引用
 using UnityEngine.UIElements;
 using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 //卡牌状态，正面、背面
 public enum CardState
@@ -19,11 +21,22 @@ public class CardToggle : MonoBehaviour
     public float mTime = 0.3f;
     private bool isActive = false;//true代表正在执行翻转，不许被打断
 
+    //在DrawTenCards中的raarity下标编号
+    private int index;
+
+    public Rarity rarity;
+    //粒子效果
+    //public ParticleSystem particleSystem;
+    
+
     /// <summary>
     /// 初始化卡牌角度，根据mCardState
     /// </summary>
     public void Init()
     {
+        index = DrawTenCards.cardIndex++;
+        ParticleSystem particleSystem = GetComponentInChildren<ParticleSystem>();
+        particleSystem.Stop();
         if (mCardState == CardState.Front)
         {
             //如果是从正面开始，则将背面旋转90度，这样就看不见背面了
@@ -87,18 +100,18 @@ public class CardToggle : MonoBehaviour
         isActive = false;
     }
 
-    public void Toggle()
+    public async void Toggle()
     {
-        //if (mCardState == CardState.Front)
-        //{
-        //    StartBack();
-        //    mCardState = CardState.Back;
-        //}
-        //else
         {
             StartFront();
             mCardState = CardState.Front;
+            if (DrawTenCards.rarities[index] == Rarity.SR)
+            {
+                ParticleSystem particleSystem = GetComponentInChildren<ParticleSystem>();
+                particleSystem.Play();
+                await Task.Delay(3000);
+                particleSystem.Stop();
+            }
         }
-        //Console.WriteLine("Fuck");
     }
 }
