@@ -68,7 +68,6 @@ public static class CardRate
 
 public class DrawTenCards : MonoBehaviour
 {
-    
     public Image card0;
     public Image card1;
     public Image card2;
@@ -79,6 +78,12 @@ public class DrawTenCards : MonoBehaviour
     public Image card7;
     public Image card8;
     public Image card9;
+
+    //Unity里面没有找到获取script中monobehaviour的instance的方法
+    //所以暂时用弱智小学生办法声明static来写..
+    //网上查了好久一直没有找到，没办法只能先这样了。
+    public static Rarity[] rarities;
+    public static int cardIndex;
 
     // Start is called before the first frame update
     void Start()
@@ -100,6 +105,13 @@ public class DrawTenCards : MonoBehaviour
         Transform[] cards = new Transform[transform.childCount];
 
         Rarity[] rarityResult = CardRate.DrawTenCards();
+
+        rarities = new Rarity[10];
+        for (int i = 0; i < 10; i++)
+            rarities[i] = rarityResult[i];
+
+        cardIndex = 0;
+
         string[] drawResult = Cards.getTenCards(rarityResult);
 
         for (int i = 0; i < 10; i++)
