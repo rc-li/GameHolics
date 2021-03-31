@@ -19032,7 +19032,7 @@ MonoBehaviour:
   - {fileID: 616712612}
   - {fileID: 1277554568}
   waves:
-  - enemy: {fileID: 3033535261608615289, guid: 2c4c67f523c88400d99014138a48e4d7, type: 3}
+  - enemy: {fileID: 5285270289438897925, guid: 478c41b402de7a4449083f7512e5260b, type: 3}
     count: 20
     rate: 3
   - enemy: {fileID: 3033535261608615289, guid: 2c4c67f523c88400d99014138a48e4d7, type: 3}
