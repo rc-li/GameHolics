@@ -8,6 +8,7 @@ public class TowerType6 : Tower
     public HealthBar healthbar;
     private int maxHealth;
     private int currentHealth;
+    public static int towerPrice = 1; // for testing
     public void Start()
     {
         maxHealth = 100;
