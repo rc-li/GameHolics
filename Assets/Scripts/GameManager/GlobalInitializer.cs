@@ -3,14 +3,18 @@ using System.IO;
 
 public static class GlobalInitializer
 {
+    private static string CARD_CONFIGURATION = "/Assets/Scripts/Cards.csv";
+    private static string PREFAB_PREFIX = "";
+
     //从卡牌配置文档之中读取卡牌信息
     public static void readCardConfiguration()
     {
         var lines = File.ReadAllLines(System.Environment.CurrentDirectory
-            + "/Assets/Scripts/Cards.csv");
+            + CARD_CONFIGURATION);
         foreach (var line in lines)
         {
             string[] strs = line.Split(',');
+            Cards.all.Add(strs[0], strs[1]);
             switch (strs[2])
             {
                 case "SSR":
