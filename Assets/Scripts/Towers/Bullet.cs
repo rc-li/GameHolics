@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private float minDistanceToDealDamage = 0.1f;
     protected GameObject target;
     protected Transform startPoint;
 
