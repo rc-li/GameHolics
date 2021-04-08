@@ -116,7 +116,7 @@ public class DrawTenCards : MonoBehaviour
 
         for (int i = 0; i < 10; i++)
         {
-            string cardPath = Cards.getDictionaryByRarity(rarityResult[i])[drawResult[i]];
+            string cardPath = Cards.CARD_PATH_PREFIX + Cards.getDictionaryByRarity(rarityResult[i])[drawResult[i]];
             images[i].sprite = Resources.Load(cardPath, typeof(Sprite)) as Sprite;
         }
 

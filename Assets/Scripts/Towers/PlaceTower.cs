@@ -33,34 +33,43 @@ public class PlaceTower : MonoBehaviour
         hover = GameObject.Find("Hover").GetComponent<Hover>();
         if (canPlaceTower())
         {
-            if (PlayerStatus.selectTowerNumber == 1 && PlayerStatus.money >= SelectTowerType1.towerPrice)
+            //if (PlayerStatus.selectTowerNumber == 1 && PlayerStatus.money >= SelectTowerType1.towerPrice)
+            //{
+            //    tower = (GameObject)Instantiate(PlayerStatus.towerPrefab, transform.position, Quaternion.identity);
+            //    PlayerStatus.money -= SelectTowerType1.towerPrice;
+            //    audioSource.PlayOneShot(audioSource.clip);
+            //}
+            //else if (PlayerStatus.selectTowerNumber == 2 && PlayerStatus.money >= SelectTowerType2.towerPrice)
+            //{
+            //    tower = (GameObject)Instantiate(PlayerStatus.towerPrefab, transform.position, Quaternion.identity);
+            //    PlayerStatus.money -= SelectTowerType2.towerPrice;
+            //    audioSource.PlayOneShot(audioSource.clip);
+            //}
+            //else if (PlayerStatus.selectTowerNumber == 3 && PlayerStatus.money >= SelectTowerType3.towerPrice)
+            //{
+            //    tower = (GameObject)Instantiate(PlayerStatus.towerPrefab, transform.position, Quaternion.identity);
+            //    PlayerStatus.money -= SelectTowerType3.towerPrice;
+            //    audioSource.PlayOneShot(audioSource.clip);
+            //}
+            //else if (PlayerStatus.selectTowerNumber == 4 && PlayerStatus.money >= SelectTowerType3.towerPrice)
+            //{
+            //    tower = (GameObject)Instantiate(PlayerStatus.towerPrefab, transform.position, Quaternion.identity);
+            //    PlayerStatus.money -= SelectTowerType4.towerPrice;
+            //    audioSource.PlayOneShot(audioSource.clip);
+            //}
+            //else if (PlayerStatus.selectTowerNumber == 5 && PlayerStatus.money >= SelectTowerType3.towerPrice)
+            //{
+            //    tower = (GameObject)Instantiate(PlayerStatus.towerPrefab, transform.position, Quaternion.identity);
+            //    PlayerStatus.money -= SelectTowerType5.towerPrice;
+            //    audioSource.PlayOneShot(audioSource.clip);
+            //}
+
+            //游戏数值设置之后再用一个config file来做
+            //现在测试暂时先这么写
+            if (PlayerStatus.money > 0)
             {
                 tower = (GameObject)Instantiate(PlayerStatus.towerPrefab, transform.position, Quaternion.identity);
-                PlayerStatus.money -= SelectTowerType1.towerPrice;
-                audioSource.PlayOneShot(audioSource.clip);
-            }
-            else if (PlayerStatus.selectTowerNumber == 2 && PlayerStatus.money >= SelectTowerType2.towerPrice)
-            {
-                tower = (GameObject)Instantiate(PlayerStatus.towerPrefab, transform.position, Quaternion.identity);
-                PlayerStatus.money -= SelectTowerType2.towerPrice;
-                audioSource.PlayOneShot(audioSource.clip);
-            }
-            else if (PlayerStatus.selectTowerNumber == 3 && PlayerStatus.money >= SelectTowerType3.towerPrice)
-            {
-                tower = (GameObject)Instantiate(PlayerStatus.towerPrefab, transform.position, Quaternion.identity);
-                PlayerStatus.money -= SelectTowerType3.towerPrice;
-                audioSource.PlayOneShot(audioSource.clip);
-            }
-            else if (PlayerStatus.selectTowerNumber == 4 && PlayerStatus.money >= SelectTowerType3.towerPrice)
-            {
-                tower = (GameObject)Instantiate(PlayerStatus.towerPrefab, transform.position, Quaternion.identity);
-                PlayerStatus.money -= SelectTowerType4.towerPrice;
-                audioSource.PlayOneShot(audioSource.clip);
-            }
-            else if (PlayerStatus.selectTowerNumber == 5 && PlayerStatus.money >= SelectTowerType3.towerPrice)
-            {
-                tower = (GameObject)Instantiate(PlayerStatus.towerPrefab, transform.position, Quaternion.identity);
-                PlayerStatus.money -= SelectTowerType5.towerPrice;
+                PlayerStatus.money -= 1;
                 audioSource.PlayOneShot(audioSource.clip);
             }
             else

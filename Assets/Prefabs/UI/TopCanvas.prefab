@@ -1448,6 +1448,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopTurrentItem5
       objectReference: {fileID: 0}
+    - target: {fileID: 3327275426675855846, guid: 99e9b63ae282249adaf2de9427f6376c,
+        type: 3}
+      propertyPath: id
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99e9b63ae282249adaf2de9427f6376c, type: 3}
 --- !u!224 &2296678723914315262 stripped
@@ -1698,6 +1703,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopTurrentItem2
       objectReference: {fileID: 0}
+    - target: {fileID: 3327275426675855846, guid: 99e9b63ae282249adaf2de9427f6376c,
+        type: 3}
+      propertyPath: id
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99e9b63ae282249adaf2de9427f6376c, type: 3}
 --- !u!224 &3671932505360489209 stripped
@@ -1822,6 +1832,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShopTurrentItem4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3327275426675855846, guid: 99e9b63ae282249adaf2de9427f6376c,
+        type: 3}
+      propertyPath: id
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99e9b63ae282249adaf2de9427f6376c, type: 3}
@@ -1948,6 +1963,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopTurrentItem6
       objectReference: {fileID: 0}
+    - target: {fileID: 3327275426675855846, guid: 99e9b63ae282249adaf2de9427f6376c,
+        type: 3}
+      propertyPath: id
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99e9b63ae282249adaf2de9427f6376c, type: 3}
 --- !u!224 &7141846152076859226 stripped
@@ -2072,6 +2092,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShopTurrentItem3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3327275426675855846, guid: 99e9b63ae282249adaf2de9427f6376c,
+        type: 3}
+      propertyPath: id
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99e9b63ae282249adaf2de9427f6376c, type: 3}
