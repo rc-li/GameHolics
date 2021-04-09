@@ -14,7 +14,8 @@ public static class GlobalInitializer
         foreach (var line in lines)
         {
             string[] strs = line.Split(',');
-            Cards.all.Add(strs[0], strs[1]);
+            if(!Cards.all.ContainsKey(strs[0]))
+                Cards.all.Add(strs[0], strs[1]);
             switch (strs[2])
             {
                 case "SSR":

@@ -26,4 +26,9 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("StartMenu");
     }
+
+    public void SelectCharacters()
+    {
+
+    }
 }

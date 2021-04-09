@@ -9,6 +9,8 @@ public static class GlobalPlayer
     private static string name;
     public static int hp = 1000;
     public static int money = 1000;
+
+    //这个指改玩家从卡池中抽到的卡
     public static List<string> cards = new List<string>()
     {
         "TowerType1","TowerType2","TowerType3","TowerType4","TowerType5","TowerType6"
