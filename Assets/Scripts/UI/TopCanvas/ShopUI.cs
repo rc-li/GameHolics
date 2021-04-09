@@ -17,6 +17,7 @@ public class ShopUI : MonoBehaviour
     private void Awake()
     {
         shopTexts = gameObject.GetComponentsInChildren<Text>();
+        //shopTexts = gameObject.GetComponentInChildren<>
         foreach (var text in shopTexts)
         {
             if (text.name == "Shop1Text")

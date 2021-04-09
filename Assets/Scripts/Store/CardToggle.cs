@@ -110,7 +110,8 @@ public class CardToggle : MonoBehaviour
                 ParticleSystem particleSystem = GetComponentInChildren<ParticleSystem>();
                 particleSystem.Play();
                 await Task.Delay(3000);
-                particleSystem.Stop();
+                if(particleSystem != null)
+                    particleSystem.Stop();
             }
         }
     }

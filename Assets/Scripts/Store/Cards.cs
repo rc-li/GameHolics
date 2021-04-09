@@ -4,13 +4,16 @@ using System.Linq;
 
 public static class Cards
 {
+    public static string CARD_PATH_PREFIX = "UI/";
     //Lazy Initialization, not good
     //应该在之后在进行这个步骤，以优化启动游戏速度
     //在启动游戏的时候应该只加载必要的配置
+    //key是角色的名字 value是角色的目录
     public static Dictionary<string, string> SSR = new Dictionary<string, string>();
     public static Dictionary<string, string> SR = new Dictionary<string, string>();
     public static Dictionary<string, string> R = new Dictionary<string, string>();
     public static Dictionary<string, string> N = new Dictionary<string, string>();
+    public static Dictionary<string, string> all = new Dictionary<string, string>();
 
     public static Dictionary<string,string> getDictionaryByRarity(Rarity rarity)
     {
