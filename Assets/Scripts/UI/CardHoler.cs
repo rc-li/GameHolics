@@ -16,13 +16,12 @@ public class CardHoler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         check.SetActive(false);
         button.onClick.AddListener(delegate { OnClick(); });
         //onClick.AddListener(delegate { OnClick(); });
         if (index >= GlobalPlayer.cards.Count)
             self.SetActive(false);
-        else image.sprite = Resources.Load("UI/" + GlobalPlayer.cards[index], typeof(Sprite)) as Sprite;
+        else image.sprite = Resources.Load("UI/" + Cards.all[GlobalPlayer.cards.ElementAt(index)], typeof(Sprite)) as Sprite;
     }
 
     // Update is called once per frame
@@ -46,10 +45,10 @@ public class CardHoler : MonoBehaviour
         }
         else
         {
-            selectedIndex = SelectedCharacters.addACardToSelectedSet(GlobalPlayer.cards[index]);
+            selectedIndex = SelectedCharacters.addACardToSelectedSet(Cards.all[GlobalPlayer.cards.ElementAt(index)]);
             if (selectedIndex != -1)
             {
-                SelectedCharacters.images[selectedIndex].sprite = Resources.Load("UI/" + GlobalPlayer.cards[index], typeof(Sprite)) as Sprite;
+                SelectedCharacters.images[selectedIndex].sprite = Resources.Load("UI/" + Cards.all[GlobalPlayer.cards.ElementAt(index)], typeof(Sprite)) as Sprite;
                 SelectedCharacters.images[selectedIndex].enabled = true;
                 // = Resources.Load(GlobalPlayer.cards[index],typeof(sprite)) as Sprite;
                 //SelectedCharacters.addACardToSelectedSet();

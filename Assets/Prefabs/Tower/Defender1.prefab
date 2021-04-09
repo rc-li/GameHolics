@@ -126,7 +126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 0}
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 5208963647921984562, guid: 5c25b3e5ee6974326a7ae7d3356e29ca,
+    type: 3}
   healthbar: {fileID: 5642274471125726385}
 --- !u!114 &1703223890627833693
 MonoBehaviour:

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class LevelSelector : MonoBehaviour
@@ -23,7 +24,11 @@ public class LevelSelector : MonoBehaviour
 
     public void SelectLevel(string levelName)
     {
-        sceneFader.FadeToScene(levelName);
+        //stored integration
+        int sceneIndex = levelName[levelName.Length - 1] - '0';
+        GlobalSceneManager.sceneIndex = sceneIndex;
+        sceneFader.FadeToScene("CharacterSelect");
+        //sceneFader.FadeToScene(levelName);
     }
 
 
