@@ -12,11 +12,12 @@ public class EnemyMovementBack : MonoBehaviour
     private Transform target;
 
     public string pathName;
-    public GameObject[] paths;
+    [SerializeField] private GameObject[] paths;
 
 
     private void Awake()
     {
+        paths = GameObject.FindGameObjectsWithTag("Route");
         pathName = paths[WaveSpawner.randomSpawn].name;
         wayPoints = GameObject.Find(pathName).GetComponent<WayPoints>();
         destination = GameObject.Find("trojan");
