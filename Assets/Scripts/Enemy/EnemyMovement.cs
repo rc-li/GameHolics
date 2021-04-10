@@ -13,19 +13,17 @@ public class EnemyMovement : MonoBehaviour
     private Vector3 _lastPointPosition;
     private SpriteRenderer _spriteRenderer;
     public Vector3 CurrentPointPosition;
-    // Rigidbody2D rbody;
-
-
+    
     public string pathName;
-    public GameObject[] paths;
+    [SerializeField] private GameObject[] paths;
 
 
     private void Awake()
     {
+        paths = GameObject.FindGameObjectsWithTag("Route");
         pathName = paths[WaveSpawner.randomSpawn].name;
         wayPoints = GameObject.Find(pathName).GetComponent<WayPoints>();
         destination = GameObject.Find("trojan");
-        // rbody = GetComponent<Rigidbody2D>();
         enemy = GetComponent<Enemy>();
     }
 
@@ -39,22 +37,8 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         CurrentPointPosition = target.position;
-        //float distance = Vector2.Distance(target.position, transform.position);
-        // transform.position = Vector2.MoveTowards(transform.position, target.position, Time.deltaTime * enemy.speed);
         Vector2 direction = target.position - transform.position;
         transform.Translate(direction.normalized * enemy.speed * Time.deltaTime, Space.World);
-        // Vector2 nextPosition = new Vector2(target.position.x, target.position.y);
-        // Vector2 currentPosition = rbody.position;
-        // Vector2 direction = nextPosition - currentPosition;
-        // direction = Vector2.ClampMagnitude(direction, 1);
-        // Vector2 velocity = direction * enemy.speed;
-        // rbody.MovePosition(currentPosition + velocity * Time.fixedDeltaTime);
-
-
-        // rotation
-        // Vector2 direction = nextPosition - transform.position;
-        // float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        // transform.rotation = Quaternion.AngleAxis(angle, Vector2.forward);
         Rotate();
         if (CurrentPointPositionReached())
         {
@@ -110,34 +94,11 @@ public class EnemyMovement : MonoBehaviour
         ArriveDestination();
     }
 
-    // void GetPreviousWaypoint()
-    // {
-    //     if (wayPointIndex > 0)
-    //     {
-    //         wayPointIndex--;
-    //         target = wayPoints.pathObjs[wayPointIndex];
-    //         return;
-    //     }
-
-    //     if (wayPointIndex == 0)
-    //     {
-    //         BackToDeparture();
-    //         return;
-    //     }
-    // }
-
-    // void BackToDeparture()
-    // {
-    //     WaveSpawner.aliveEnemyNumber--;
-    //     Destroy(gameObject);
-    // }
-
     void ArriveDestination()
     {
         PlayerStatus.lives--; // reference to PlayerStatus, GameStatus
         WaveSpawner.aliveEnemyNumber--;
         Destroy(gameObject);
-        // Debug.Log("arrived destination");
     }
 }
 
