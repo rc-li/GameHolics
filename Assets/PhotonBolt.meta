@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/PhotonBolt.meta
 guid: ff6987f151b0d4c9f9de9a8c4c30b283
+=======
+guid: 609d7719143ff2d4c9b35b46c40641dc
+>>>>>>> 61d4de3a01763d2b3125db112662216303836aca:Assets/Art/editor.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
