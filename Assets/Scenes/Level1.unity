@@ -2993,10 +2993,19 @@ MonoBehaviour:
   - {fileID: 1277554568}
   - {fileID: 240478282}
   waves:
-  - enemy: {fileID: 8955010531780929853, guid: 19fc85f32c1a6ef4fa16dfe4fe3c2761, type: 3}
+  - waveEnemy:
+    - enemy: {fileID: 3033535261608615289, guid: 2c4c67f523c88400d99014138a48e4d7,
+        type: 3}
+      enemyNumber: 2
+    - enemy: {fileID: 5285270289438897925, guid: 478c41b402de7a4449083f7512e5260b,
+        type: 3}
+      enemyNumber: 3
+    - enemy: {fileID: 8955010531780929853, guid: 19fc85f32c1a6ef4fa16dfe4fe3c2761,
+        type: 3}
+      enemyNumber: 4
     count: 20
     rate: 3
-  - enemy: {fileID: 3033535261608615289, guid: 2c4c67f523c88400d99014138a48e4d7, type: 3}
+  - waveEnemy: []
     count: 20
     rate: 1
   gameStatus: {fileID: 1764930347}
