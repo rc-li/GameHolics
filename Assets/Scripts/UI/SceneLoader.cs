@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
 
+    public SceneFader sceneFader;
+
     public void LoadGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -25,5 +27,9 @@ public class SceneLoader : MonoBehaviour
     public void LoadMenu()
     {
         SceneManager.LoadScene("StartMenu");
+    }
+
+    public void LoadLevelSelector() {
+        sceneFader.FadeToScene("LevelSelector");
     }
 }
