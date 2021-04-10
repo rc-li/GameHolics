@@ -65,13 +65,21 @@ public class WaveSpawner : MonoBehaviour
     {
         PlayerStatus.Rounds++;
         Wave wave = waves[waveIndex];
-        aliveEnemyNumber = wave.count;
+
+        for (int i = 0; i < wave.waveEnemy.Length; i++)
+        {
+            aliveEnemyNumber += wave.waveEnemy[i].enemyNumber;
+        }
+
+        Debug.Log("aliveEnemyNumber:" + aliveEnemyNumber);
+
+        // aliveEnemyNumber = wave.count;
 
         // for (int i = 0; i < wave.count; i++)
         // {
         //     SpawnEnemy(wave.enemy);
         //     yield return new WaitForSeconds(1.0f / wave.rate);
-        // }
+        // }    
 
         for (int i = 0; i < wave.waveEnemy.Length; i++)
         {
