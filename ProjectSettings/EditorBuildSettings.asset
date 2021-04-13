@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level1.unity
     guid: 2e00f93dd8100489780fcfc763c603b4
   - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: ff1d3bb61f5a040c9a5dad093ad9588b
+  - enabled: 1
     path: Assets/Scenes/Store/CharacterCalling.unity
     guid: 070423f2b87d24d54bef65c506dcc59b
   - enabled: 1

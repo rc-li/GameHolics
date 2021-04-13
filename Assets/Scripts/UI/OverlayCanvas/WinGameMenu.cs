@@ -20,6 +20,7 @@ public class WinGameMenu : MonoBehaviour
 
     public void Menu()
     {
+        SelectedCharacters.clear();
         sceneFader.FadeToScene(mainMenu);
     }
 }

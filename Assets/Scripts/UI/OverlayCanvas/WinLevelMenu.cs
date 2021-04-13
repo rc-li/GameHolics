@@ -22,11 +22,14 @@ public class WinLevelMenu : MonoBehaviour
 
     public void Continue()
     {
-        sceneFader.FadeToScene(gameStatus.nextLevelName);
+        SelectedCharacters.clear();
+        GlobalSceneManager.sceneIndex += 1;
+        sceneFader.FadeToScene("CharacterSelect");
     }
 
     public void Menu()
     {
+        SelectedCharacters.clear();
         sceneFader.FadeToScene(mainMenu);
     }
 }

@@ -17,7 +17,6 @@ public static class SelectedCharacters
     //
     public static void setCharacters(string[] characters)
     {
-
         for (int i = 0; i < MAX_CHARACTER; i++)
         {
             selectedCharacters[i] = characters[i];
@@ -35,5 +34,15 @@ public static class SelectedCharacters
             }
         }
         return -1;
+    }
+
+    public static void clear()
+    {
+        for (int i = 0; i < MAX_CHARACTER; i++)
+        {
+            //images[i] = null;
+            //texts[i] = null;
+            selectedCharacters[i] = null;
+        }
     }
 }
