@@ -15,6 +15,7 @@ public static class Cards
     public static Dictionary<string, string> N = new Dictionary<string, string>();
     public static Dictionary<string, string> all = new Dictionary<string, string>();
 
+    public static Dictionary<string,CardProperty> cardProperties = new Dictionary<string, CardProperty>();
     public static Dictionary<string,string> getDictionaryByRarity(Rarity rarity)
     {
         switch (rarity)

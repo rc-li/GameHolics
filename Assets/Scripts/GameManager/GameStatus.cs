@@ -8,7 +8,8 @@ public class GameStatus : MonoBehaviour
     private GameObject winGameMenu;
     private GameObject gameOverMenu;
     public static bool gameIsOver;
-    private int totalLevels = 4;
+    //在build setting里面 的 最后一个level所对应的scend Index
+    private const int LAST_LEVEL = 7;
     public string nextLevelName;
     public string currentLevelName;
     private int currentLevel;
@@ -50,13 +51,13 @@ public class GameStatus : MonoBehaviour
     {
         gameIsOver = true;
 
-        if (currentLevel < totalLevels)
+        if (currentLevel < LAST_LEVEL)
         {
             winLevelMenu.SetActive(true);
             SetNextLevel(currentLevel);
         }
 
-        else if (currentLevel == totalLevels)
+        else if (currentLevel == LAST_LEVEL)
         {
             WinGame();
         }

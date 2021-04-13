@@ -14,8 +14,16 @@ public static class GlobalInitializer
         foreach (var line in lines)
         {
             string[] strs = line.Split(',');
-            if(!Cards.all.ContainsKey(strs[0]))
+            if (!Cards.all.ContainsKey(strs[0]))
+            {
                 Cards.all.Add(strs[0], strs[1]);
+                CardProperty cardProperty = new CardProperty();
+                cardProperty.name = strs[0];
+                cardProperty.atk = int.Parse(strs[3]);
+                cardProperty.hp = int.Parse(strs[4]);
+                cardProperty.cost = int.Parse(strs[5]);
+                Cards.cardProperties.Add(strs[0],cardProperty);
+            }
             switch (strs[2])
             {
                 case "SSR":

@@ -10,12 +10,13 @@ public class LevelSelector : MonoBehaviour
 
     private void Start()
     {
-
+        //perfab可以持久化数值吗，通关记录被保存了
         int levelReached = PlayerPrefs.GetInt("levelReached", 1);
 
         for (int i = 0; i < levelButtons.Length; i++)
         {
-            if (i + 1 > levelReached)
+            //hard coded for now
+            if (i + 1> levelReached)
             {
                 levelButtons[i].interactable = false;
             }
