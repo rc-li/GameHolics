@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,10 +9,10 @@ public class Enemy : MonoBehaviour
     protected int currentHealth;
     protected float startSpeed;
     public float speed;
-    protected int value;
+    public int value;
     public int attackPoint;
     public HealthBar healthbar;
-    private bool isDead = false;
+    public bool isDead = false;
     public int wayPointIndex = 0;
 
     public void TakeDamage(int damage)
@@ -23,6 +24,11 @@ public class Enemy : MonoBehaviour
         {
             Die();
         }
+    }
+
+    public void StopMovement()
+    {
+        speed = 0;
     }
 
     public void SlowDown(float slowPercent)
@@ -40,9 +46,10 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void Die()
+    public virtual void Die()
     {
         isDead = true;
+        StopMovement();
         PlayerStatus.money += value;
         WaveSpawner.aliveEnemyNumber--;
         Destroy(gameObject);
