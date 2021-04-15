@@ -162,7 +162,6 @@ GameObject:
   - component: {fileID: 1699121586191464111}
   - component: {fileID: 1699121586191464096}
   - component: {fileID: 1699121586191464110}
-  - component: {fileID: 5255239995898196408}
   m_Layer: 5
   m_Name: Shop
   m_TagString: Untagged
@@ -257,18 +256,6 @@ MonoBehaviour:
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
---- !u!114 &5255239995898196408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1699121586191464098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21e6b7e75a5c2425e8777f49ce38b9d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1699121586978788416
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,6 +1325,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1699121586191464097}
     m_Modifications:
+    - target: {fileID: 828801601795931775, guid: 99e9b63ae282249adaf2de9427f6376c,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 828801601960490150, guid: 99e9b63ae282249adaf2de9427f6376c,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1468,6 +1460,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1699121586191464097}
     m_Modifications:
+    - target: {fileID: 828801601795931775, guid: 99e9b63ae282249adaf2de9427f6376c,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 828801601960490150, guid: 99e9b63ae282249adaf2de9427f6376c,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1593,6 +1590,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1699121586191464097}
     m_Modifications:
+    - target: {fileID: 828801601795931775, guid: 99e9b63ae282249adaf2de9427f6376c,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 828801601960490150, guid: 99e9b63ae282249adaf2de9427f6376c,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1723,6 +1725,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1699121586191464097}
     m_Modifications:
+    - target: {fileID: 828801601795931775, guid: 99e9b63ae282249adaf2de9427f6376c,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 828801601960490150, guid: 99e9b63ae282249adaf2de9427f6376c,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1853,6 +1860,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1699121586191464097}
     m_Modifications:
+    - target: {fileID: 828801601795931775, guid: 99e9b63ae282249adaf2de9427f6376c,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 828801601960490150, guid: 99e9b63ae282249adaf2de9427f6376c,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1983,6 +1995,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1699121586191464097}
     m_Modifications:
+    - target: {fileID: 828801601795931775, guid: 99e9b63ae282249adaf2de9427f6376c,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 828801601960490150, guid: 99e9b63ae282249adaf2de9427f6376c,
         type: 3}
       propertyPath: m_Pivot.x

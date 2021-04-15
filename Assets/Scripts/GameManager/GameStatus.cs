@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class GameStatus : MonoBehaviour
 {
@@ -8,11 +9,11 @@ public class GameStatus : MonoBehaviour
     private GameObject winGameMenu;
     private GameObject gameOverMenu;
     public static bool gameIsOver;
-    //在build setting里面 的 最后一个level所对应的scend Index
-    private const int LAST_LEVEL = 7;
-    public string nextLevelName;
-    public string currentLevelName;
-    private int currentLevel;
+    private const int LAST_LEVEL = 5;
+    private int reachedLevelNumber;
+    private int savedLevelNumber;
+    public string reachedLevelName;
+
 
     private void Awake()
     {
@@ -24,8 +25,9 @@ public class GameStatus : MonoBehaviour
     private void Start()
     {
         gameIsOver = false;
-        currentLevel = SceneManager.GetActiveScene().buildIndex;
-        System.Console.WriteLine(currentLevel);
+        reachedLevelName = SceneManager.GetActiveScene().name;
+        reachedLevelNumber = Int32.Parse(reachedLevelName.Substring(reachedLevelName.Length - 1));
+        savedLevelNumber = PlayerPrefs.GetInt("levelReached", 0);
         //GlobalInitializer.readCardConfiguration();
     }
 
@@ -43,7 +45,6 @@ public class GameStatus : MonoBehaviour
     {
         gameIsOver = true;
         PlayerStatus.Rounds--;
-        currentLevelName = GetSceneNameByBuildIndex(currentLevel);
         gameOverMenu.SetActive(true);
     }
 
@@ -51,33 +52,28 @@ public class GameStatus : MonoBehaviour
     {
         gameIsOver = true;
 
-        if (currentLevel < LAST_LEVEL)
+        if (reachedLevelNumber < LAST_LEVEL)
         {
             winLevelMenu.SetActive(true);
-            SetNextLevel(currentLevel);
+            SetNextLevel();
         }
 
-        else if (currentLevel == LAST_LEVEL)
+        else if (reachedLevelNumber == LAST_LEVEL)
         {
             WinGame();
         }
-
     }
 
-    public void SetNextLevel(int _currentLevel)
+    private void SetNextLevel()
     {
-        int nextLevel = _currentLevel + 1;
-        PlayerPrefs.SetInt("levelReached", nextLevel - 2);
-        nextLevelName = GetSceneNameByBuildIndex(nextLevel);
-        // Debug.Log("nextLevelName:" + nextLevelName);
+        reachedLevelNumber++;
+        if (reachedLevelNumber > savedLevelNumber)
+        {
+            PlayerPrefs.SetInt("levelReached", reachedLevelNumber);
+        }
+        Debug.Log("savedLevelNumber" + savedLevelNumber);
     }
 
-    public string GetSceneNameByBuildIndex(int buildIndex)
-    {
-        string path = SceneUtility.GetScenePathByBuildIndex(buildIndex);
-        string sceneName = path.Substring(0, path.Length - 6).Substring(path.LastIndexOf('/') + 1);
-        return sceneName;
-    }
 
     private void WinGame()
     {

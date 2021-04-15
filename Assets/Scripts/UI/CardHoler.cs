@@ -13,7 +13,7 @@ public class CardHoler : MonoBehaviour
     public GameObject check;
     public Button button;
     private int selectedIndex = -1;
-    // Start is called before the first frame update
+
     void Start()
     {
         check.SetActive(false);
@@ -24,12 +24,6 @@ public class CardHoler : MonoBehaviour
         else
             image.sprite = Resources.Load("UI/" + Cards.all[GlobalPlayer.cards.ElementAt(index)], typeof(Sprite)) as Sprite;
     }
-
-    // Update is called once per frame
-    //void Update()
-    //{
-        
-    //}
 
     void OnClick()
     {

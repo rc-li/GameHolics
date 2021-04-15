@@ -10,16 +10,10 @@ public class PlaceTower : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip noMoney;
     private Hover hover;
-    // Start is called before the first frame update
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     private bool canPlaceTower()

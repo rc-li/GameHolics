@@ -10,7 +10,7 @@ public class BattleSceneShopItem : MonoBehaviour
     public Image image;
     public Button button;
     public int id;
-    // Start is called before the first frame update
+
     void Start()
     {
         if(SelectedCharacters.selectedCharacters[id] == null)
@@ -29,12 +29,6 @@ public class BattleSceneShopItem : MonoBehaviour
 
         button.onClick.AddListener(delegate { OnClick(); });
     }
-
-    //// Update is called once per frame
-    //void Update()
-    //{
-        
-    //}
 
     public void OnClick()
     {

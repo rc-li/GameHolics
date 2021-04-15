@@ -8,7 +8,7 @@ public class MusicPlayerScript : MonoBehaviour
     public AudioSource AudioSource;
     public Slider volumeSlider;
     private float musicVolume = 1f;
-    // Start is called before the first frame update
+
     void Start()
     {
         musicVolume = PlayerPrefs.GetFloat("volume");
@@ -18,7 +18,6 @@ public class MusicPlayerScript : MonoBehaviour
         volumeSlider.value = musicVolume;
     }
 
-    // Update is called once per frame
     void Update()
     {
         AudioSource.volume = musicVolume;

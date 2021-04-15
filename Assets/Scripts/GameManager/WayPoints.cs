@@ -9,14 +9,12 @@ public class WayPoints : MonoBehaviour
     public Transform[] wayPoints;
     public Vector3 CurrentPosition => _currentPosition;
     private Vector3 _currentPosition;
-	private void Start()
+	
+    private void Start()
 	{
         _currentPosition = transform.position;
 	}
 
-    // private void Awake()
-    // {
-    
     private void OnDrawGizmos()
     {
 
@@ -46,16 +44,6 @@ public class WayPoints : MonoBehaviour
         }
     }
 }
-
-//    public static Transform[] pathObjs;
-//     void Awake()
-//     {
-//         pathObjs = new Transform[transform.childCount];
-//         for (int i = 0; i < pathObjs.Length; i++)
-//         {
-//             pathObjs[i] = transform.GetChild(i);
-//         }
-//     }
 
 
 

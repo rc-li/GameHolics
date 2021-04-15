@@ -6,7 +6,8 @@ public class WinLevelMenu : MonoBehaviour
     private SceneFader sceneFader;
     private GameStatus gameStatus;
     private GameObject winLevelMenu;
-    private string mainMenu = "LevelSelector";
+    private string mainMenu = "StartMenu";
+
 
     private void Awake()
     {

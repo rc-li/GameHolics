@@ -14,6 +14,5 @@ public class BulletType3 : Bullet
     {
         base.HitTarget();
         target.GetComponent<Enemy>().TakeDamage(damage);
-        // Debug.Log("type 3 buttlet damage");
     }
 }

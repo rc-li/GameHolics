@@ -70,16 +70,7 @@ public class WaveSpawner : MonoBehaviour
         {
             aliveEnemyNumber += wave.waveEnemy[i].enemyNumber;
         }
-
-        Debug.Log("aliveEnemyNumber:" + aliveEnemyNumber);
-
-        // aliveEnemyNumber = wave.count;
-
-        // for (int i = 0; i < wave.count; i++)
-        // {
-        //     SpawnEnemy(wave.enemy);
-        //     yield return new WaitForSeconds(1.0f / wave.rate);
-        // }    
+        // Debug.Log("aliveEnemyNumber:" + aliveEnemyNumber);
 
         for (int i = 0; i < wave.waveEnemy.Length; i++)
         {

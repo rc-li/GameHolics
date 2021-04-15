@@ -1047,7 +1047,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: MENU
+  m_Text: MAIN MENU
 --- !u!1 &2354169463158175557
 GameObject:
   m_ObjectHideFlags: 0
@@ -1912,7 +1912,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SELECT LEVEL
+  m_Text: MAIN MENU
 --- !u!1 &3618269000375715879
 GameObject:
   m_ObjectHideFlags: 0
@@ -2610,7 +2610,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SELECT LEVEL
+  m_Text: MAIN MENU
 --- !u!1 &3618269000920262605
 GameObject:
   m_ObjectHideFlags: 0
@@ -3614,7 +3614,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SELECT LEVEL
+  m_Text: MAIN MENU
 --- !u!1 &4500025375835663421
 GameObject:
   m_ObjectHideFlags: 0

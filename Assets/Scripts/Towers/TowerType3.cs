@@ -14,8 +14,6 @@ public class TowerType3 : Tower
         InvokeRepeating("UpdateTarget", 0.0f, 0.5f); // invoke UpdateTarget() every 0.5 seconds starts from 0 second
     }
 
-	
-
 	protected override void Shoot()
     {
         GameObject bulletInst = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);

@@ -5,22 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class GoToLevel : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    //void Update()
-    //{
-
-    //}
-
     public void Continue()
     {
         //SceneFader sceneFader = GameObject.Find("SceneFader").GetComponent<SceneFader>();
         //GameStatus gameStatus = GameObject.Find("GameManager").GetComponent<GameStatus>();
         SceneManager.LoadScene("Level" + GlobalSceneManager.sceneIndex);
+    }
+
+    public void Back()
+    {
+        SceneManager.LoadScene("StartMenu");
     }
 }

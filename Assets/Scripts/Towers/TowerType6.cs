@@ -30,11 +30,6 @@ public class TowerType6 : Tower
     public void Die()
     {
         Destroy(gameObject);
-
-        // new type - audio update required
-        // death audio
-        // AudioSource audioSource = gameObject.GetComponent<AudioSource>();
-        // AudioSource.PlayClipAtPoint(audioSource.clip, transform.position);
     }
 }
 

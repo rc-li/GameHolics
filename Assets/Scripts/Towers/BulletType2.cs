@@ -16,6 +16,5 @@ public class BulletType2 : Bullet
         base.HitTarget();
         target.GetComponent<Enemy>().TakeDamage(damage);
         target.GetComponent<Enemy>().SlowDown(slowPercent);
-        // Debug.Log("type 2 buttlet damage");
     }
 }

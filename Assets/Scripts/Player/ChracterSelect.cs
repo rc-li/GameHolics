@@ -10,7 +10,7 @@ public class ChracterSelect : MonoBehaviour
     public Text[] texts;
     public const int maxSize = 6;
     public int availabeMinIndex = 0;
-    // Start is called before the first frame update
+
     void Start()
     {
         foreach (Image image in images)
@@ -18,11 +18,4 @@ public class ChracterSelect : MonoBehaviour
         SelectedCharacters.images = images;
         SelectedCharacters.texts = texts;
     }
-
-    // Update is called once per frame
-    //void Update()
-    //{
-        
-    //}
-
 }

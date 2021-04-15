@@ -14,7 +14,6 @@ public class BulletType1 : Bullet
     {
         base.HitTarget();
         target.GetComponent<Enemy>().TakeDamage(damage);
-        // Debug.Log("type 1 buttlet damage");
     }
 
 }

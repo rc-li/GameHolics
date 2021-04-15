@@ -8,7 +8,8 @@ public class GameOverMenu : MonoBehaviour
     private SceneFader sceneFader;
     private GameStatus gameStatus;
     private GameObject gameOverMenu;
-    private string mainMenu = "LevelSelector";
+    private string mainMenu = "StartMenu";
+
 
     private void Awake()
     {
@@ -24,7 +25,7 @@ public class GameOverMenu : MonoBehaviour
 
     public void Restart()
     {
-        sceneFader.FadeToScene(gameStatus.currentLevelName);
+        sceneFader.FadeToScene(gameStatus.reachedLevelName);
     }
 
     public void Menu()

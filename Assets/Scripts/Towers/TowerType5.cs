@@ -18,23 +18,11 @@ public class TowerType5 : Tower
 
     protected override void Shoot()
     {
-        Debug.Log("enemies list: " + targetEnemies.Count);
-
+        // Debug.Log("enemies list: " + targetEnemies.Count);
         foreach (var targetEnemy in targetEnemies)
         {
             targetEnemy.GetComponent<Enemy>().TakeDamage(explosionTowerDamage);
-            Debug.Log("shooted");
         }
-        // // change to ananimation?
-        // GameObject bulletInst = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        // Bullet bullet = bulletInst.GetComponent<BulletType3>();
-
-        // if (bullet != null)
-        // {
-        //     bullet.LocateTarget(target);
-        //     // shooting audio
-        //     bullet.GetComponent<AudioSource>().Play();
-        // }
     }
 }
 

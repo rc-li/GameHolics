@@ -5,7 +5,7 @@ public class PauseMenu : MonoBehaviour
 {
     private GameObject pauseMenu;
     private SceneFader sceneFader;
-    private string mainMenu = "LevelSelector";
+    private string mainMenu = "StartMenu";
 
 
     private void Awake()

@@ -75,48 +75,9 @@ public class Tower : MonoBehaviour
         }
     }
 
-    // void UpdateTargets()
-    // {
-    //     targetEnemies.Clear();
-    //     GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
-    //     foreach (GameObject enemy in enemies)
-    //     {
-    //         float distanceToEnemy = Vector2.Distance(transform.position, enemy.transform.position);
-    //         if (distanceToEnemy <= range)
-    //         {
-    //             targetEnemies.Add(enemy);
-    //         }
-
-    //         if (distanceToEnemy > range)
-    //         {
-    //             targetEnemies.Remove(enemy);
-    //         }
-    //     }
-    //     Debug.Log("enemies list: " + targetEnemies.Count);
-    // }
 
     protected virtual void Shoot()
     {
-        // "object casting": create a temporary gameObject for Instantiate object
-        // GameObject bulletInst = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        // Bullet bullet = bulletInst.GetComponent<Bullet>();
-
-        // if (bullet != null)
-        // {
-        //     bullet.LocateTarget(target);
-        //     // shooting audio
-        //     bullet.GetComponent<AudioSource>().Play();
-        // }
-    }
-
-
-
-    // doesn't work right now - to be fixed
-    // show tower shooting range | red line | will disappear when un-select the tower gameObject
-    protected void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, range);
     }
 
     public int GetPrice()
@@ -130,6 +91,5 @@ public class Tower : MonoBehaviour
         if (deleteButton.activeSelf) deleteButton.SetActive(false);
         else deleteButton.SetActive(true);
     }
-
 }
 
