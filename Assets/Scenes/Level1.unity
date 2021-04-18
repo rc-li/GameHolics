@@ -217,6 +217,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 850037145705366235, guid: 510cf8f29d4174e4d85c6d362a387496,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 850037145705366235, guid: 510cf8f29d4174e4d85c6d362a387496,
+        type: 3}
       propertyPath: m_Name
       value: Openspot3
       objectReference: {fileID: 0}
@@ -284,6 +290,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1295522157}
     m_Modifications:
+    - target: {fileID: 850037145705366235, guid: 510cf8f29d4174e4d85c6d362a387496,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 850037145705366235, guid: 510cf8f29d4174e4d85c6d362a387496,
         type: 3}
       propertyPath: m_Name
@@ -2157,6 +2169,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 850037145705366235, guid: 510cf8f29d4174e4d85c6d362a387496,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 850037145705366235, guid: 510cf8f29d4174e4d85c6d362a387496,
+        type: 3}
       propertyPath: m_Name
       value: Openspot6
       objectReference: {fileID: 0}
@@ -2843,6 +2861,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 850037145705366235, guid: 510cf8f29d4174e4d85c6d362a387496,
         type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
+    - target: {fileID: 850037145705366235, guid: 510cf8f29d4174e4d85c6d362a387496,
+        type: 3}
       propertyPath: m_Name
       value: Openspot7
       objectReference: {fileID: 0}
@@ -2916,6 +2940,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1295522157}
     m_Modifications:
+    - target: {fileID: 850037145705366235, guid: 510cf8f29d4174e4d85c6d362a387496,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 850037145705366235, guid: 510cf8f29d4174e4d85c6d362a387496,
         type: 3}
       propertyPath: m_Name
