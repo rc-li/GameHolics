@@ -41,11 +41,15 @@ public class EnemyAnimations : MonoBehaviour
 
     private void OnEnable()
     {
+        EnemyType3.OnEnemyKilled += EnemyDead;
         EnemyType4.OnEnemyKilled += EnemyDead;
+        EnemyType5.OnEnemyKilled += EnemyDead;
     }
 
     private void OnDisable()
     {
+        EnemyType3.OnEnemyKilled -= EnemyDead;
         EnemyType4.OnEnemyKilled -= EnemyDead;
+        EnemyType5.OnEnemyKilled -= EnemyDead;
     }
 }
