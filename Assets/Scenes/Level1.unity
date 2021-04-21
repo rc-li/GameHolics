@@ -2356,10 +2356,10 @@ MonoBehaviour:
   - {fileID: 1494208296}
   waves:
   - waveEnemy:
-    - enemy: {fileID: 1864930479223075201, guid: 2c4c67f523c88400d99014138a48e4d7,
+    - enemy: {fileID: 6865984994076461595, guid: f1b488adf38204d1da71d8e7605320f5,
         type: 3}
       enemyNumber: 20
-    - enemy: {fileID: 5285270289438897925, guid: 478c41b402de7a4449083f7512e5260b,
+    - enemy: {fileID: 4087304000473963261, guid: 478c41b402de7a4449083f7512e5260b,
         type: 3}
       enemyNumber: 30
     rate: 1
