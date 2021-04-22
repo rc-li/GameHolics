@@ -8,6 +8,7 @@ public class TowerType5 : Tower
 {
     private int explosionTowerDamage = 500;
     new public static int price = 150;
+    public GameObject explosionEffect;
 
     public void Start()
     {
@@ -18,11 +19,15 @@ public class TowerType5 : Tower
 
     protected override void Shoot()
     {
+        Instantiate(explosionEffect, transform.position, Quaternion.identity);
+
         // Debug.Log("enemies list: " + targetEnemies.Count);
         foreach (var targetEnemy in targetEnemies)
         {
             targetEnemy.GetComponent<Enemy>().TakeDamage(explosionTowerDamage);
         }
+
+        Destroy(gameObject);
     }
 }
 
