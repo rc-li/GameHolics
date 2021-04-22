@@ -5,12 +5,9 @@ using UnityEngine;
 public class EnemyAnimations : MonoBehaviour
 {
     private Animator _animator;
-    //private GameObject _enemy;
-    // Start is called before the first frame update
     void Start()
     {
         _animator = GetComponent<Animator>();
-        //_enemy = GetComponent<GameObject>();
     }
 
     private void PlayDieAnimation()

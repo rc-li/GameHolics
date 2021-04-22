@@ -26,7 +26,7 @@ public class SelectTowerType3 : MonoBehaviour
     {
         PlayerStatus.towerPrefab = towerPrefab;
         PlayerStatus.selectTowerNumber = 3;
-        sprite = gameObject.GetComponent<Image>().sprite;
+        sprite = gameObject.GetComponent<SpriteRenderer>().sprite;
         hover = GameObject.Find("Hover").GetComponent<Hover>();
         //Debug.Log(sprite);
         hover.Activate(sprite);
