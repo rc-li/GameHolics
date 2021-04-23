@@ -17,10 +17,9 @@ public static class GlobalInitializer
         foreach (var line in lines)
         {
             string[] strs = line.Split(',');
-            if (!Cards.all.ContainsKey(strs[1]))
+            if (!Cards.all.ContainsKey(strs[0]))
             {
-                // Cards.all.Add(strs[0], strs[1]);
-                Cards.all.Add(strs[1], strs[2]);
+                Cards.all.Add(strs[0], strs[1]);
                 CardProperty cardProperty = new CardProperty();
                 // cardProperty.name = strs[0];
                 cardProperty.name = strs[1];

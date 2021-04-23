@@ -39,7 +39,7 @@ public class CardHoler : MonoBehaviour
             SelectedCharacters.texts[selectedIndex].enabled = false;
             SelectedCharacters.selectedCharacters[selectedIndex] = null;
             selectedIndex = -1;
-            
+
         }
         else//该角色被选入出战编队
         {   //传的永远都是角色的名字，它的prefab/property什么都通过这个名字在Cards里面去查询
@@ -47,7 +47,8 @@ public class CardHoler : MonoBehaviour
             if (selectedIndex != -1)
             {
                 SelectedCharacters.texts[selectedIndex].text = "$" + Cards.cardProperties[GlobalPlayer.cards.ElementAt(index)].cost;
-                SelectedCharacters.images[selectedIndex].sprite = Resources.Load("UI/" + Cards.all[GlobalPlayer.cards.ElementAt(index)], typeof(Sprite)) as Sprite;
+                // SelectedCharacters.images[selectedIndex].sprite = Resources.Load("UI/" + Cards.all[GlobalPlayer.cards.ElementAt(index)], typeof(Sprite)) as Sprite;
+                SelectedCharacters.images[selectedIndex].sprite = Resources.Load("UI/" + Cards.cardProperties[GlobalPlayer.cards.ElementAt(index)].name, typeof(Sprite)) as Sprite;
                 SelectedCharacters.images[selectedIndex].enabled = true;
                 SelectedCharacters.texts[selectedIndex].enabled = true;
                 // = Resources.Load(GlobalPlayer.cards[index],typeof(sprite)) as Sprite;

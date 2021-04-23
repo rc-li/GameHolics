@@ -7,7 +7,7 @@ public class CardProperty
     // public int atk;
     // public int hp;
     // public int cost;
-    public int index;
+    public string index;
     public string name;
     // public string rarity;
     public float range;

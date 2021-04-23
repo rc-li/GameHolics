@@ -16,7 +16,7 @@ public class PlayerStatus : MonoBehaviour
     public static GameObject towerPrefab;
     public static int selectTowerNumber;
 
-    void Start()
+    public void Start()
     {
 
         // lives = GlobalPlayer.hp;
@@ -28,7 +28,7 @@ public class PlayerStatus : MonoBehaviour
         towerPrefab = null;
     }
 
-    private void Update()
+    public void Update()
     {
         if (lives < 0)
         {
