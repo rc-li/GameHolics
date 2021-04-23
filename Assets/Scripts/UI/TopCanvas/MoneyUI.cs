@@ -9,7 +9,6 @@ public class MoneyUI : MonoBehaviour
     {
         moneyText = GetComponentInChildren<Text>();
         moneyText.text = "0";
-
     }
 
     private void Update()

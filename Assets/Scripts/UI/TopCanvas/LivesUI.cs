@@ -9,7 +9,6 @@ public class LivesUI : MonoBehaviour
     {
         livesText = GetComponentInChildren<Text>();
         livesText.text = "0";
-
     }
 
     private void Update()

@@ -5,16 +5,15 @@ using UnityEngine.UI;
 public class CreditToStart : MonoBehaviour
 {
     public SceneFader sceneFader;
-    // Start is called before the first frame update
+
     void Start()
     {
-        Invoke("LoadMenu",31);
+        Invoke("LoadMenu", 31);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void LoadMenu()

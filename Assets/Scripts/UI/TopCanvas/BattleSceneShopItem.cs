@@ -13,7 +13,7 @@ public class BattleSceneShopItem : MonoBehaviour
 
     void Start()
     {
-        if(SelectedCharacters.selectedCharacters[id] == null)
+        if (SelectedCharacters.selectedCharacters[id] == null)
         {
             text.enabled = false;
             image.enabled = false;
@@ -32,7 +32,6 @@ public class BattleSceneShopItem : MonoBehaviour
 
     public void OnClick()
     {
-        //PlayerStatus.
         PlayerStatus.selectTowerNumber = id;
 
         //IO操作非常expensive，应该在游戏加载之前就把所有的动态perfab全部

@@ -10,8 +10,9 @@ public class TowerType1 : Tower
     // new private float range;
     // new private float fireRate;
 
-    public void Start()
+    public override void Start()
     {
+        base.Start();
         range = Cards.cardProperties["TowerType1"].range;
         fireRate = Cards.cardProperties["TowerType1"].fireRate;
         // range = 3.0f;

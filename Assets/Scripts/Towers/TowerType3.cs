@@ -6,11 +6,12 @@ using UnityEngine;
 
 public class TowerType3 : Tower
 {
-    public void Start()
+    public override void Start()
     {
+        base.Start();
         range = Cards.cardProperties["TowerType3"].range;
         fireRate = Cards.cardProperties["TowerType3"].fireRate;
-        InvokeRepeating("UpdateTarget", 0.0f, 0.5f); // invoke UpdateTarget() every 0.5 seconds starts from 0 second
+        InvokeRepeating("UpdateTarget", 0.0f, 0.5f);
     }
 
     protected override void Shoot()

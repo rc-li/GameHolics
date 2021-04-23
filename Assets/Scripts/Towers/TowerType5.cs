@@ -9,12 +9,12 @@ public class TowerType5 : Tower
     private int explosionTowerDamage;
     public GameObject explosionEffect;
 
-    public void Start()
+    public override void Start()
     {
         range = Cards.cardProperties["TowerType5"].range;
         fireRate = Cards.cardProperties["TowerType5"].fireRate;
         explosionTowerDamage = Cards.cardProperties["TowerType5"].damage;
-        InvokeRepeating("UpdateTarget", 0.0f, 2.0f); // invoke UpdateTarget() every 0.5 seconds starts from 0 second
+        InvokeRepeating("UpdateTarget", 0.0f, 2.0f);
     }
 
     protected override void Shoot()

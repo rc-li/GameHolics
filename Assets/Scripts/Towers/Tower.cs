@@ -17,6 +17,14 @@ public class Tower : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
 
+    private CanvasGroup towerCanvas;
+
+    public virtual void Start()
+    {
+        towerCanvas = transform.Find("TowerCanvas").GetComponent<CanvasGroup>();
+        towerCanvas.alpha = 0.0f;
+    }
+
     void Update()
     {
         if (GameStatus.gameIsOver == true)
@@ -76,20 +84,31 @@ public class Tower : MonoBehaviour
     }
 
 
-    protected virtual void Shoot()
-    {
-    }
+    protected virtual void Shoot() { }
 
     // public int GetPrice()
     // {
     //     return price;
     // }
 
-    void OnMouseDown()
+    public void OnMouseDown()
     {
-        GameObject deleteButton = this.transform.Find("DeleteButton").gameObject;
-        if (deleteButton.activeSelf) deleteButton.SetActive(false);
-        else deleteButton.SetActive(true);
+        // GameObject deleteButton = this.transform.Find("DeleteButton").gameObject;
+        // if (deleteButton.activeSelf) deleteButton.SetActive(false);
+        // else deleteButton.SetActive(true);
+        if (towerCanvas.alpha == 0.0f)
+        {
+            towerCanvas.alpha = 1.0f;
+        }
+        else
+        {
+            towerCanvas.alpha = 0.0f;
+        }
+    }
+
+    public void Delete()
+    {
+        Destroy(gameObject);
     }
 }
 

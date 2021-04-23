@@ -5,11 +5,12 @@ using UnityEngine;
 // type4: bewitching tower
 public class TowerType4 : Tower
 {
-    public void Start()
+    public override void Start()
     {
+        base.Start();
         range = Cards.cardProperties["TowerType4"].range;
         fireRate = Cards.cardProperties["TowerType4"].fireRate;
-        InvokeRepeating("UpdateTarget", 0.0f, 0.5f); // invoke UpdateTarget() every 0.5 seconds starts from 0 second
+        InvokeRepeating("UpdateTarget", 0.0f, 0.5f);
     }
 
     protected override void Shoot()
