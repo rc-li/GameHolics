@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class TowerType3 : Tower
 {
-    new public static int price = 70;
+    // new public static int price = 70;
     public void Start()
     {
         range = 3.0f;
@@ -14,7 +14,7 @@ public class TowerType3 : Tower
         InvokeRepeating("UpdateTarget", 0.0f, 0.5f); // invoke UpdateTarget() every 0.5 seconds starts from 0 second
     }
 
-	protected override void Shoot()
+    protected override void Shoot()
     {
         GameObject bulletInst = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Bullet bullet = bulletInst.GetComponent<BulletType3>();
@@ -22,12 +22,12 @@ public class TowerType3 : Tower
         if (bullet != null)
         {
             bullet.LocateTarget(target);
-           
+
             // shooting audio
             bullet.GetComponent<AudioSource>().Play();
         }
     }
 
-    
+
 
 }

@@ -5,10 +5,10 @@ using System.Collections.Generic;
 //C#的instance中不能用singleton，凑合一下吧
 public static class GlobalPlayer
 {
-    private static int id;
-    private static string name;
-    public static int hp = 1000;
-    public static int money = 1000;
+    //     private static int id;
+    //     private static string name;
+    //     public static int hp = 1000;
+    //     public static int money = 1000;
 
     //这个指改玩家从卡池中抽到的卡
     public static HashSet<string> cards = new HashSet<string>();

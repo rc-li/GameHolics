@@ -5,7 +5,7 @@ using UnityEngine;
 // type4: bewitching tower
 public class TowerType4 : Tower
 {
-    new public static int price = 100;
+    // new public static int price = 100;
     public void Start()
     {
         range = 3.0f;

@@ -7,7 +7,7 @@ using UnityEngine;
 public class TowerType5 : Tower
 {
     private int explosionTowerDamage = 500;
-    new public static int price = 150;
+    // new public static int price = 150;
     public GameObject explosionEffect;
 
     public void Start()

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class TowerType1 : Tower
 {
-    new public static int price = 20;
+    // new public static int price = 20;
 
     public void Start()
     {

@@ -6,10 +6,10 @@ public class PlayerStatus : MonoBehaviour
 {
 
     public static int lives;
-    public static int startLives = 20;
+    public static int startLives = 30;
 
     public static int money;
-    public static int startMoney = 100;
+    public static int startMoney = 900;
 
     public static int Rounds;
 
@@ -19,9 +19,11 @@ public class PlayerStatus : MonoBehaviour
     void Start()
     {
 
-        lives = GlobalPlayer.hp;
-        
-        money = GlobalPlayer.money; //startMoney;
+        // lives = GlobalPlayer.hp;
+        // money = GlobalPlayer.money; //startMoney;
+
+        lives = startLives;
+        money = startMoney;
         Rounds = 0;
         towerPrefab = null;
     }
@@ -31,6 +33,11 @@ public class PlayerStatus : MonoBehaviour
         if (lives < 0)
         {
             lives = 0;
+        }
+
+        if (money < 0)
+        {
+            money = 0;
         }
     }
 }
