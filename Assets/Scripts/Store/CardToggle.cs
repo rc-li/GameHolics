@@ -22,19 +22,21 @@ public class CardToggle : MonoBehaviour
     private bool isActive = false;//true代表正在执行翻转，不许被打断
 
     //在DrawTenCards中的raarity下标编号
-    private int index;
+    // private int index;
 
-    public Rarity rarity;
+    private int cardIndex;
+
+    // public Rarity rarity;
     //粒子效果
     //public ParticleSystem particleSystem;
-    
+
 
     /// <summary>
     /// 初始化卡牌角度，根据mCardState
     /// </summary>
     public void Init()
     {
-        index = DrawTenCards.cardIndex++;
+        // index = DrawTenCards.cardIndex++;
         ParticleSystem particleSystem = GetComponentInChildren<ParticleSystem>();
         particleSystem.Stop();
         if (mCardState == CardState.Front)
@@ -102,17 +104,17 @@ public class CardToggle : MonoBehaviour
 
     public async void Toggle()
     {
+        cardIndex = transform.GetSiblingIndex();
+        StartFront();
+        mCardState = CardState.Front;
+        // if (DrawTenCards.rarity[index] == Rarity.SR)
+        if (DrawTenCards.rarityResult[cardIndex] == Rarity.SR)
         {
-            StartFront();
-            mCardState = CardState.Front;
-            if (DrawTenCards.rarities[index] == Rarity.SR)
-            {
-                ParticleSystem particleSystem = GetComponentInChildren<ParticleSystem>();
-                particleSystem.Play();
-                await Task.Delay(3000);
-                if(particleSystem != null)
-                    particleSystem.Stop();
-            }
+            ParticleSystem particleSystem = GetComponentInChildren<ParticleSystem>();
+            particleSystem.Play();
+            await Task.Delay(3000);
+            if (particleSystem != null)
+                particleSystem.Stop();
         }
     }
 }

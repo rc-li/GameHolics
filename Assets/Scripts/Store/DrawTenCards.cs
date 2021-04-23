@@ -8,10 +8,10 @@ using UnityEngine.UI;
 
 public enum Rarity
 {
-    SSR ,
-    SR ,
-    R ,
-    N 
+    SSR,
+    SR,
+    R,
+    N
 };
 
 public static class CardRate
@@ -82,10 +82,10 @@ public class DrawTenCards : MonoBehaviour
     //Unity里面没有找到获取script中monobehaviour的instance的方法
     //所以暂时用弱智小学生办法声明static来写..
     //网上查了好久一直没有找到，没办法只能先这样了。
-    public static Rarity[] rarities;
+    // public static Rarity[] rarities;
+    public static Rarity[] rarityResult;
     public static int cardIndex;
 
-    // Start is called before the first frame update
     void Start()
     {
         //Unity 渲染asset的顺序是从上到下，所以说
@@ -104,19 +104,20 @@ public class DrawTenCards : MonoBehaviour
 
         Transform[] cards = new Transform[transform.childCount];
 
-        Rarity[] rarityResult = CardRate.DrawTenCards();
+        rarityResult = CardRate.DrawTenCards();
 
-        rarities = new Rarity[10];
-        for (int i = 0; i < 10; i++)
-            rarities[i] = rarityResult[i];
+        // rarities = new Rarity[10];
+        // for (int i = 0; i < 10; i++)
+        //     rarities[i] = rarityResult[i];
 
-        cardIndex = 0;
+        // cardIndex = 0;
 
         string[] drawResult = Cards.getTenCards(rarityResult);
 
         for (int i = 0; i < 10; i++)
         {
-            string cardPath = Cards.CARD_PATH_PREFIX + Cards.getDictionaryByRarity(rarityResult[i])[drawResult[i]];
+            // string cardPath = Cards.CARD_PATH_PREFIX + Cards.getDictionaryByRarity(rarityResult[i])[drawResult[i]];
+            string cardPath = Cards.CARD_PATH_PREFIX + drawResult[i];
             images[i].sprite = Resources.Load(cardPath, typeof(Sprite)) as Sprite;
         }
 
@@ -125,8 +126,5 @@ public class DrawTenCards : MonoBehaviour
             Transform card = transform.GetChild(i);
             cards[i] = card;
         }
-
-        Debug.Log(GlobalPlayer.cards);
-        Console.WriteLine(GlobalPlayer.cards);
     }
 }

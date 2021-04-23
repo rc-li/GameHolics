@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Initialization: read all property values from .csv file
+// And save to dictionaries - dictionaries are initialized in Cards.cs
+
+using System;
 using System.IO;
 
 public static class GlobalInitializer
@@ -14,36 +17,60 @@ public static class GlobalInitializer
         foreach (var line in lines)
         {
             string[] strs = line.Split(',');
-            if (!Cards.all.ContainsKey(strs[0]))
+            if (!Cards.all.ContainsKey(strs[1]))
             {
-                Cards.all.Add(strs[0], strs[1]);
+                // Cards.all.Add(strs[0], strs[1]);
+                Cards.all.Add(strs[1], strs[2]);
                 CardProperty cardProperty = new CardProperty();
-                cardProperty.name = strs[0];
+                // cardProperty.name = strs[0];
+                cardProperty.name = strs[1];
                 cardProperty.range = float.Parse(strs[3]);
                 cardProperty.fireRate = float.Parse(strs[4]);
                 cardProperty.speed = float.Parse(strs[5]);
                 cardProperty.slowPercent = float.Parse(strs[6]);
                 cardProperty.damage = int.Parse(strs[7]);
                 cardProperty.cost = int.Parse(strs[8]);
-                Cards.cardProperties.Add(strs[0], cardProperty);
+                Cards.cardProperties.Add(strs[1], cardProperty);
             }
             switch (strs[2])
+            // {
+            //     case "SSR":
+            //         if (!Cards.SSR.ContainsKey(strs[0]))
+            //             Cards.SSR.Add(strs[0], strs[1]);
+            //         break;
+            //     case "SR":
+            //         if (!Cards.SR.ContainsKey(strs[0]))
+            //             Cards.SR.Add(strs[0], strs[1]);
+            //         break;
+            //     case "R":
+            //         if (!Cards.R.ContainsKey(strs[0]))
+            //             Cards.R.Add(strs[0], strs[1]);
+            //         break;
+            //     case "N":
+            //         if (!Cards.N.ContainsKey(strs[0]))
+            //             Cards.N.Add(strs[0], strs[1]);
+            //         break;
+            //     default:
+
+            //         Console.WriteLine("Error! Unknown Card Type!");
+            //         break;
+            // }
             {
                 case "SSR":
-                    if (!Cards.SSR.ContainsKey(strs[0]))
-                        Cards.SSR.Add(strs[0], strs[1]);
+                    if (!Cards.SSR.ContainsKey(strs[1]))
+                        Cards.SSR.Add(strs[1], strs[2]);
                     break;
                 case "SR":
-                    if (!Cards.SR.ContainsKey(strs[0]))
-                        Cards.SR.Add(strs[0], strs[1]);
+                    if (!Cards.SR.ContainsKey(strs[1]))
+                        Cards.SR.Add(strs[1], strs[2]);
                     break;
                 case "R":
-                    if (!Cards.R.ContainsKey(strs[0]))
-                        Cards.R.Add(strs[0], strs[1]);
+                    if (!Cards.R.ContainsKey(strs[1]))
+                        Cards.R.Add(strs[1], strs[2]);
                     break;
                 case "N":
-                    if (!Cards.N.ContainsKey(strs[0]))
-                        Cards.N.Add(strs[0], strs[1]);
+                    if (!Cards.N.ContainsKey(strs[1]))
+                        Cards.N.Add(strs[1], strs[2]);
                     break;
                 default:
 

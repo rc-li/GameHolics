@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Initialize dictionaries
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -15,26 +17,25 @@ public static class Cards
     public static Dictionary<string, string> N = new Dictionary<string, string>();
     public static Dictionary<string, string> all = new Dictionary<string, string>();
 
-    public static Dictionary<string,CardProperty> cardProperties = new Dictionary<string, CardProperty>();
-    public static Dictionary<string,string> getDictionaryByRarity(Rarity rarity)
-    {
-        switch (rarity)
-        {
-            case Rarity.SSR:
-                return SSR;
-            case Rarity.SR:
-                return SR;
-            case Rarity.R:
-                return R;
-            case Rarity.N:
-                return N;
-            default:
-                break;
-        }
-        return null;
-    }
+    public static Dictionary<string, CardProperty> cardProperties = new Dictionary<string, CardProperty>();
+    // public static Dictionary<string, string> getDictionaryByRarity(Rarity rarity)
+    // {
+    //     switch (rarity)
+    //     {
+    //         case Rarity.SSR:
+    //             return SSR;
+    //         case Rarity.SR:
+    //             return SR;
+    //         case Rarity.R:
+    //             return R;
+    //         case Rarity.N:
+    //             return N;
+    //         default:
+    //             break;
+    //     }
+    //     return null;
+    // }
 
-    //public const string BASIC_PITCHER = "TowerType1";
     public static string[] getTenCards(Rarity[] rarities)
     {
         string[] res = new string[10];
