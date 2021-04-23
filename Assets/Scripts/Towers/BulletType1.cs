@@ -6,8 +6,8 @@ public class BulletType1 : Bullet
 {
     void Start()
     {
-        speed = 5.0f;
-        damage = 20;
+        speed = Cards.cardProperties["TowerType1"].speed;
+        damage = Cards.cardProperties["TowerType1"].damage;
     }
 
     protected override void HitTarget()
@@ -15,5 +15,4 @@ public class BulletType1 : Bullet
         base.HitTarget();
         target.GetComponent<Enemy>().TakeDamage(damage);
     }
-
 }

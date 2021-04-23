@@ -7,11 +7,15 @@ using UnityEngine;
 public class TowerType1 : Tower
 {
     // new public static int price = 20;
+    // new private float range;
+    // new private float fireRate;
 
     public void Start()
     {
-        range = 3.0f;
-        fireRate = 3.0f;
+        range = Cards.cardProperties["TowerType1"].range;
+        fireRate = Cards.cardProperties["TowerType1"].fireRate;
+        // range = 3.0f;
+        // fireRate = 3.0f;
         InvokeRepeating("UpdateTarget", 0.0f, 0.5f); // invoke UpdateTarget() every 0.5 seconds starts from 0 second
     }
 

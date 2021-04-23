@@ -5,11 +5,10 @@ using UnityEngine;
 // type4: bewitching tower
 public class TowerType4 : Tower
 {
-    // new public static int price = 100;
     public void Start()
     {
-        range = 3.0f;
-        fireRate = 0.5f;  // speed = 1/0.5f
+        range = Cards.cardProperties["TowerType4"].range;
+        fireRate = Cards.cardProperties["TowerType4"].fireRate;
         InvokeRepeating("UpdateTarget", 0.0f, 0.5f); // invoke UpdateTarget() every 0.5 seconds starts from 0 second
     }
 

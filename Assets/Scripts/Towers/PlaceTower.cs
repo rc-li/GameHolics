@@ -16,7 +16,7 @@ public class PlaceTower : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    private bool canPlaceTower()
+    private bool CanPlaceTower()
     {
         if (PlayerStatus.money > Cards.cardProperties[SelectedCharacters.selectedCharacters[PlayerStatus.selectTowerNumber]].cost)
         {
@@ -29,8 +29,7 @@ public class PlaceTower : MonoBehaviour
     {
         hover = GameObject.Find("Hover").GetComponent<Hover>();
 
-
-        if (canPlaceTower())
+        if (CanPlaceTower())
         {
             // if (PlayerStatus.selectTowerNumber == 1 && PlayerStatus.money >= SelectTowerType1.towerPrice)
             // {
@@ -46,8 +45,6 @@ public class PlaceTower : MonoBehaviour
             // }
             //}
 
-            //游戏数值设置之后再用一个config file来做
-            //现在测试暂时先这么写
             tower = (GameObject)Instantiate(PlayerStatus.towerPrefab, transform.position, Quaternion.identity);
             PlayerStatus.money -= Cards.cardProperties[SelectedCharacters.selectedCharacters[PlayerStatus.selectTowerNumber]].cost;
             audioSource.PlayOneShot(audioSource.clip);
@@ -58,7 +55,6 @@ public class PlaceTower : MonoBehaviour
             {
                 audioSource.PlayOneShot(noMoney);
             }
-
         }
         hover.Deactivate();
         //tower = (GameObject) Instantiate(PlayerStatus.towerPrefab, transform.position, Quaternion.identity);

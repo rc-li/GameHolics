@@ -95,8 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38d0bbafd2519428fa5b53878512261d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 0}
-  bulletPrefab: {fileID: 612109826783900694}
+  firePoint: {fileID: 612109826783900693}
+  bulletPrefab: {fileID: 0}
   explosionEffect: {fileID: 100000, guid: 5d028565f79e270408884b995abc06ef, type: 3}
 --- !u!1 &612109826783900694
 GameObject:

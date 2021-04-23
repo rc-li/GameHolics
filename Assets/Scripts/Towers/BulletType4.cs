@@ -6,8 +6,8 @@ public class BulletType4 : Bullet
 {
     void Start()
     {
-        speed = 3.0f;
-        damage = 100;
+        speed = Cards.cardProperties["TowerType4"].speed;
+        damage = Cards.cardProperties["TowerType4"].damage;
     }
 
     protected override void HitTarget()

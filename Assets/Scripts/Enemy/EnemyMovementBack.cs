@@ -37,7 +37,7 @@ public class EnemyMovementBack : MonoBehaviour
         // transform.position = Vector2.MoveTowards(transform.position, target.position, Time.deltaTime * enemy.speed);
         Vector2 direction = target.position - transform.position;
         transform.Translate(direction.normalized * enemy.speed * Time.deltaTime, Space.World);
-        Debug.Log("wayPointIndex: " + wayPointIndex);
+        // Debug.Log("wayPointIndex: " + wayPointIndex);
         if (distance <= switchPointDistance)
         {
             GetPreviousWaypoint();

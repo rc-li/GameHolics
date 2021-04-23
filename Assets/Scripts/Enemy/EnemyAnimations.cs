@@ -24,7 +24,7 @@ public class EnemyAnimations : MonoBehaviour
     private IEnumerator PlayDead()
     {
         PlayDieAnimation();
-        Debug.Log("dead");
+        // Debug.Log("dead");
         yield return new WaitForSeconds(GetCurrentAnimationLength() + 0.3f);
         Destroy(gameObject);
     }

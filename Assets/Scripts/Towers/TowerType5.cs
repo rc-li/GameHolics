@@ -6,14 +6,14 @@ using UnityEngine;
 
 public class TowerType5 : Tower
 {
-    private int explosionTowerDamage = 500;
-    // new public static int price = 150;
+    private int explosionTowerDamage;
     public GameObject explosionEffect;
 
     public void Start()
     {
-        range = 3.0f;
-        fireRate = 0.5f;
+        range = Cards.cardProperties["TowerType5"].range;
+        fireRate = Cards.cardProperties["TowerType5"].fireRate;
+        explosionTowerDamage = Cards.cardProperties["TowerType5"].damage;
         InvokeRepeating("UpdateTarget", 0.0f, 2.0f); // invoke UpdateTarget() every 0.5 seconds starts from 0 second
     }
 

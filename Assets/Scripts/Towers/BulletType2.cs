@@ -6,9 +6,9 @@ public class BulletType2 : Bullet
 {
     void Start()
     {
-        speed = 5.0f;
-        damage = 20;
-        slowPercent = 0.3f;
+        speed = Cards.cardProperties["TowerType2"].speed;
+        slowPercent = Cards.cardProperties["TowerType2"].slowPercent;
+        damage = Cards.cardProperties["TowerType2"].damage;
     }
 
     protected override void HitTarget()

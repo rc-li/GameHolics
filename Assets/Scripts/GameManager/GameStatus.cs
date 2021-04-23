@@ -71,7 +71,7 @@ public class GameStatus : MonoBehaviour
         {
             PlayerPrefs.SetInt("levelReached", reachedLevelNumber);
         }
-        Debug.Log("savedLevelNumber" + savedLevelNumber);
+        // Debug.Log("savedLevelNumber" + savedLevelNumber);
     }
 
 

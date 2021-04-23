@@ -5,13 +5,10 @@ using UnityEngine;
 // type2: iceball damage-slow down tower
 public class TowerType2 : Tower
 {
-
-    // new public static int price = 50;
-
     public void Start()
     {
-        range = 3.0f;
-        fireRate = 3.0f;
+        range = Cards.cardProperties["TowerType2"].range;
+        fireRate = Cards.cardProperties["TowerType2"].fireRate;
         InvokeRepeating("UpdateTarget", 0.0f, 0.5f); // invoke UpdateTarget() every 0.5 seconds starts from 0 second
     }
 

@@ -27,15 +27,14 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-		
-            MoveProjectile();
-            RoatateProjectile(target);
-        
+
+        MoveProjectile();
+        RoatateProjectile(target);
+
 
         //Vector2 direction = target.transform.position - transform.position;
         //float distanceThisFrame = speed * Time.deltaTime;
         // float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
 
         // to make sure we can touch the target in this frame
         // direction.magnitude -> the length of direction vector
@@ -54,7 +53,7 @@ public class Bullet : MonoBehaviour
     {
         Vector2 direction = target.transform.position - transform.position;
         float distanceThisFrame = speed * Time.deltaTime;
-   
+
         if (Vector2.Distance(gameObject.transform.position, target.transform.position) <= distanceThisFrame)
         {
             HitTarget();

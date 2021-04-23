@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    // protected int price = 0;
+    protected int price = 0;
     protected float range; // tower shooting range
     protected float fireRate; // bullet number shooted per second
     protected float fireCountdown = 0.0f; // timer
