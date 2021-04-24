@@ -3,17 +3,21 @@
 
 using System;
 using System.IO;
+using UnityEngine;
 
 public static class GlobalInitializer
 {
-    private static string CARD_CONFIGURATION = "/Assets/Scripts/Cards.csv";
+    private static string CARD_CONFIGURATION = "Cards";
     private static string PREFAB_PREFIX = "";
 
     //从卡牌配置文档之中读取卡牌信息
     public static void readCardConfiguration()
     {
-        var lines = File.ReadAllLines(System.Environment.CurrentDirectory
-            + CARD_CONFIGURATION);
+        var resource = Resources.Load<TextAsset>(CARD_CONFIGURATION);
+        //Debug.Log("read");
+        //File.ReadAllLines(System.Environment.CurrentDirectory
+        //+ CARD_CONFIGURATION);
+        var lines = resource.text.Split('\n');
         foreach (var line in lines)
         {
             string[] strs = line.Split(',');
