@@ -14,7 +14,7 @@ public class TowerType5 : Tower
         range = Cards.cardProperties["TowerType5"].range;
         fireRate = Cards.cardProperties["TowerType5"].fireRate;
         explosionTowerDamage = Cards.cardProperties["TowerType5"].damage;
-        InvokeRepeating("UpdateTarget", 0.0f, 2.0f);
+        InvokeRepeating("UpdateTarget", 0.0f, 1.0f);
     }
 
     protected override void Shoot()

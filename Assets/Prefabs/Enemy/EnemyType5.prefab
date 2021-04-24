@@ -33,7 +33,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5517848436011522009}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.37, y: -3.25, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7899742795964531739}
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 305457cfe9a38dd4cb71513811e5d8e7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -271,11 +271,11 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.18, y: 0.51}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.03, y: 1}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1.3733333, y: 1.3333334}
     newSize: {x: 1.03, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -412,12 +412,12 @@ PrefabInstance:
     - target: {fileID: 7680891426056581622, guid: e4c64e5883cf941c096f384ecc0aa93a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 5.6290236
+      value: -0.22
       objectReference: {fileID: 0}
     - target: {fileID: 7680891426056581622, guid: e4c64e5883cf941c096f384ecc0aa93a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.1589694
+      value: 1.38
       objectReference: {fileID: 0}
     - target: {fileID: 7680891426056581622, guid: e4c64e5883cf941c096f384ecc0aa93a,
         type: 3}
@@ -443,16 +443,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7680891427822958916, guid: e4c64e5883cf941c096f384ecc0aa93a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -573.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7680891427822958916, guid: e4c64e5883cf941c096f384ecc0aa93a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 40.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4c64e5883cf941c096f384ecc0aa93a, type: 3}

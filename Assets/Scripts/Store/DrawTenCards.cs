@@ -28,12 +28,13 @@ public static class CardRate
         for (int i = 0; i < 9; i++)
         {
             int num = random.Next(0, 100);
-            if (num < 1)
-            {
-                res[i] = Rarity.SSR;
-                hasSR = true;
-            }
-            else if (num < 6)
+            // if (num < 1)
+            // {
+            //     res[i] = Rarity.SSR;
+            //     hasSR = true;
+            // }
+            // else if (num < 6)
+            if (num < 6)
             {
                 res[i] = Rarity.SR;
                 hasSR = true;

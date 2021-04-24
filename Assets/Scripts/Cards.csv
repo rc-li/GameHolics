@@ -1,5 +1,5 @@
-TowerType1,TowerType1,N,3.0,1.0,3.0,0,20,50
-TowerType2,TowerType2,R,3.0,1.0,3.0,0.3,20,110
-TowerType3,TowerType3,R,3.0,1.0,3.0,0,100,180
-TowerType4,TowerType4,SSR,3.0,1.0,3.0,0,100,220
-TowerType5,TowerType5,SR,3.0,1.0,3.0,0,600,270
+TowerType1,TowerType1,N,4.0,3.0,4.0,0,100,50
+TowerType2,TowerType2,N,3.0,2.5,4.0,0.5,100,110
+TowerType3,TowerType3,N,3.5,2.0,4.0,0,200,180
+TowerType4,TowerType4,R,3.0,1.0,4.0,0,0,220
+TowerType5,TowerType5,SR,4.0,0.5,4.0,0,700,270

@@ -6,10 +6,10 @@ public class PlayerStatus : MonoBehaviour
 {
 
     public static int lives;
-    public static int startLives = 30;
+    public static int startLives = 15;
 
     public static int money;
-    public static int startMoney = 900;
+    public static int startMoney = 650;
 
     public static int Rounds;
 

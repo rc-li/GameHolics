@@ -7,7 +7,7 @@ public class EnemyType6 : Enemy
     // Start is called before the first frame update
     void Start()
     {
-        maxHealth = 600;
+        maxHealth = 800;
         startSpeed = 1f;
         speed = startSpeed;
         currentHealth = maxHealth;

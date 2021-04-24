@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour
 
     protected float speed;
     protected int damage;
-    protected float slowPercent;
+    protected float slowPercent; // speed = startSpeed * (1f - slowPercent);
 
     private void Start()
     {
