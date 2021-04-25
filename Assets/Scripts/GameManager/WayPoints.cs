@@ -9,11 +9,11 @@ public class WayPoints : MonoBehaviour
     public Transform[] wayPoints;
     public Vector3 CurrentPosition => _currentPosition;
     private Vector3 _currentPosition;
-	
+
     private void Start()
-	{
+    {
         _currentPosition = transform.position;
-	}
+    }
 
     private void OnDrawGizmos()
     {
