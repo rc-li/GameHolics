@@ -37,4 +37,9 @@ public class SceneLoader : MonoBehaviour
     {
         sceneFader.FadeToScene("LevelSelector");
     }
+
+    public void LoadCreditScreen()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 }
