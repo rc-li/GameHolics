@@ -3675,6 +3675,16 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2215475459835391246, guid: 9e933742310cb4517b92835d3505c6ac,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1764930350}
+    - target: {fileID: 2215475459835391246, guid: 9e933742310cb4517b92835d3505c6ac,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadCreditScreen
+      objectReference: {fileID: 0}
     - target: {fileID: 3618268999633241528, guid: 9e933742310cb4517b92835d3505c6ac,
         type: 3}
       propertyPath: m_SizeDelta.x

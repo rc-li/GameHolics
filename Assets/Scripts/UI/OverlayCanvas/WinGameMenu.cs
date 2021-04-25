@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WinGameMenu : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class WinGameMenu : MonoBehaviour
     private GameStatus gameStatus;
     private GameObject winGameMenu;
     private string mainMenu = "StartMenu";
+    private string creditScreen = "Credits";
 
 
     private void Awake()
@@ -24,5 +26,11 @@ public class WinGameMenu : MonoBehaviour
     {
         SelectedCharacters.clear();
         sceneFader.FadeToScene(mainMenu);
+    }
+
+    public void LoadCreditScreen()
+    {
+        SelectedCharacters.clear();
+        sceneFader.FadeToScene(creditScreen);
     }
 }
