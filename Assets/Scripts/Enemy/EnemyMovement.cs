@@ -13,7 +13,7 @@ public class EnemyMovement : MonoBehaviour
     private Vector3 _lastPointPosition;
     private SpriteRenderer _spriteRenderer;
     public Vector3 CurrentPointPosition;
-    
+
     public string pathName;
     [SerializeField] private GameObject[] paths;
 
@@ -21,17 +21,26 @@ public class EnemyMovement : MonoBehaviour
     private void Awake()
     {
         paths = GameObject.FindGameObjectsWithTag("Route");
-        pathName = paths[WaveSpawner.randomSpawn].name;
-        wayPoints = GameObject.Find(pathName).GetComponent<WayPoints>();
+        // for (int i = 0; i < paths.Length; i++)
+        // {
+        //     Debug.Log(paths[i].name);
+
+        // }
+        // pathName = paths[WaveSpawner.randomSpawn].name;
+        // wayPoints = GameObject.Find(pathName).GetComponent<WayPoints>();
         destination = GameObject.Find("trojan");
         enemy = GetComponent<Enemy>();
     }
 
+
+
     void Start()
     {
+        FindWay();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         target = wayPoints.pathObjs[0];
         _lastPointPosition = transform.position;
+
     }
 
     void Update()
@@ -49,6 +58,16 @@ public class EnemyMovement : MonoBehaviour
         {
             enabled = false;
         }
+    }
+
+    private void FindWay()
+    {
+        // paths = GameObject.FindGameObjectsWithTag("Route");
+        // pathName = paths[WaveSpawner.randomSpawn].name;
+        int temp = WaveSpawner.randomSpawn + 1;
+        pathName = "Route" + temp;
+        Debug.Log(gameObject.name + "pathName" + pathName);
+        wayPoints = GameObject.Find(pathName).GetComponent<WayPoints>();
     }
 
     private bool CurrentPointPositionReached()

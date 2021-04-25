@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,8 @@ public class WaveSpawner : MonoBehaviour
 {
     public static int aliveEnemyNumber;
     public Transform[] spawnPoints;
+    // public GameObject[] spawnPoints;
+
     public Wave[] waves;
     public GameStatus gameStatus;
     public float timeBetweenWaves = 5.0f;
@@ -75,10 +78,10 @@ public class WaveSpawner : MonoBehaviour
         for (int i = 0; i < wave.waveEnemy.Length; i++)
         {
             for (int j = 0; j < wave.waveEnemy[i].enemyNumber; j++)
-                {
-                    SpawnEnemy(wave.waveEnemy[i].enemy);
-                    yield return new WaitForSeconds(1.0f / wave.rate);
-                }
+            {
+                SpawnEnemy(wave.waveEnemy[i].enemy);
+                yield return new WaitForSeconds(1.0f / wave.rate);
+            }
         }
 
         if (waveIndex <= waves.Length - 1)
@@ -89,8 +92,18 @@ public class WaveSpawner : MonoBehaviour
 
     void SpawnEnemy(Enemy enemy)
     {
+        // int num = random.Next(1000);
+        // System.Random rnd = new System.Random();
+        // int single = rnd.Next(1, 10);
+        // Debug.Log("single" + single);
         // int Random.Range Return a random int within [minInclusive..maxExclusive) (Read Only)
-        randomSpawn = Random.Range(0, spawnPoints.Length);
+        // randomSpawn = UnityEngine.Random.Range(0, spawnPoints.Length);
+        System.Random rnd = new System.Random();
+        randomSpawn = rnd.Next(0, spawnPoints.Length);
+
+        // GameObject spawnPoint = spawnPoints[randomSpawn];
+        // Debug.Log(spawnPoint.name);
+        Debug.Log(spawnPoints[randomSpawn].name);
         Instantiate(enemy, spawnPoints[randomSpawn].position, spawnPoints[randomSpawn].rotation);
     }
 }
