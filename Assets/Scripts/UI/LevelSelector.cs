@@ -38,4 +38,10 @@ public class LevelSelector : MonoBehaviour
     {
         sceneFader.FadeToScene("StartMenu");
     }
+
+    public void UnravelLevels()
+    {
+        PlayerPrefs.SetInt("levelReached", 5);
+        sceneFader.FadeToScene("LevelSelector");
+    }
 }
