@@ -13,6 +13,7 @@ public class ChracterSelect : MonoBehaviour
 
     void Start()
     {
+        SelectedCharacters.clear();
         foreach (Image image in images)
             image.enabled = false;
         SelectedCharacters.images = images;
