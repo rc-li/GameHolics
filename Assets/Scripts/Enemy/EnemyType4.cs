@@ -8,8 +8,8 @@ public class EnemyType4 : Enemy
     public static Action<GameObject> OnEnemyKilled;
     void Start()
     {
-        maxHealth = 600;
-        startSpeed = 2f;
+        maxHealth = 700;
+        startSpeed = 2.0f;
         speed = startSpeed;
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);

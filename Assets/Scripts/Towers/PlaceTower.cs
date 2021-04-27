@@ -18,7 +18,7 @@ public class PlaceTower : MonoBehaviour
 
     private bool CanPlaceTower()
     {
-        if (PlayerStatus.money > Cards.cardProperties[SelectedCharacters.selectedCharacters[PlayerStatus.selectTowerNumber]].cost)
+        if (PlayerStatus.money >= Cards.cardProperties[SelectedCharacters.selectedCharacters[PlayerStatus.selectTowerNumber]].cost)
         {
             return true;
         }
