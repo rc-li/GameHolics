@@ -2386,12 +2386,9 @@ MonoBehaviour:
   - {fileID: 1523508781}
   waves:
   - waveEnemy:
-    - enemy: {fileID: 8955010531780929853, guid: 19fc85f32c1a6ef4fa16dfe4fe3c2761,
+    - enemy: {fileID: 6865984994076461595, guid: f1b488adf38204d1da71d8e7605320f5,
         type: 3}
-      enemyNumber: 5
-    - enemy: {fileID: 4087304000473963261, guid: 478c41b402de7a4449083f7512e5260b,
-        type: 3}
-      enemyNumber: 5
+      enemyNumber: 10
     rate: 1
   gameStatus: {fileID: 1764930347}
   timeBetweenWaves: 3
