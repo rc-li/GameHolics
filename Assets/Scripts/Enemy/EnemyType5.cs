@@ -9,8 +9,8 @@ public class EnemyType5 : Enemy
     // Start is called before the first frame update
     void Start()
     {
-        maxHealth = 700;
-        startSpeed = 2f;
+        maxHealth = 2500;
+        startSpeed = 1f;
         speed = startSpeed;
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
