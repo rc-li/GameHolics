@@ -3660,47 +3660,22 @@ MonoBehaviour:
   - {fileID: 1494208296}
   waves:
   - waveEnemy:
+    - enemy: {fileID: 1864930479223075201, guid: 2c4c67f523c88400d99014138a48e4d7,
+        type: 3}
+      enemyNumber: 20
+    rate: 0.7
+  - waveEnemy:
     - enemy: {fileID: 8955010531780929853, guid: 19fc85f32c1a6ef4fa16dfe4fe3c2761,
         type: 3}
       enemyNumber: 5
-    - enemy: {fileID: 4087304000473963261, guid: 478c41b402de7a4449083f7512e5260b,
-        type: 3}
-      enemyNumber: 9
-    - enemy: {fileID: 1864930479223075201, guid: 2c4c67f523c88400d99014138a48e4d7,
-        type: 3}
-      enemyNumber: 8
-    - enemy: {fileID: 6865984994076461595, guid: f1b488adf38204d1da71d8e7605320f5,
-        type: 3}
-      enemyNumber: 10
+    rate: 0.5
+  - waveEnemy:
     - enemy: {fileID: 8955010531780929853, guid: 19fc85f32c1a6ef4fa16dfe4fe3c2761,
         type: 3}
-      enemyNumber: 7
-    - enemy: {fileID: 6865984994076461595, guid: f1b488adf38204d1da71d8e7605320f5,
-        type: 3}
-      enemyNumber: 10
-    - enemy: {fileID: 1864930479223075201, guid: 2c4c67f523c88400d99014138a48e4d7,
-        type: 3}
-      enemyNumber: 12
-    - enemy: {fileID: 4087304000473963261, guid: 478c41b402de7a4449083f7512e5260b,
-        type: 3}
-      enemyNumber: 8
-    rate: 1.5
-  - waveEnemy:
-    - enemy: {fileID: 1864930479223075201, guid: 2c4c67f523c88400d99014138a48e4d7,
-        type: 3}
       enemyNumber: 15
-    - enemy: {fileID: 4087304000473963261, guid: 478c41b402de7a4449083f7512e5260b,
-        type: 3}
-      enemyNumber: 15
-    - enemy: {fileID: 4087304000473963261, guid: 478c41b402de7a4449083f7512e5260b,
-        type: 3}
-      enemyNumber: 15
-    - enemy: {fileID: 1864930479223075201, guid: 2c4c67f523c88400d99014138a48e4d7,
-        type: 3}
-      enemyNumber: 15
-    rate: 1.5
+    rate: 0.5
   gameStatus: {fileID: 1764930347}
-  timeBetweenWaves: 5
+  timeBetweenWaves: 2
   countdown: 2
   waveIndex: 0
 --- !u!4 &1764930345
