@@ -8,7 +8,7 @@ public class CreditToStart : MonoBehaviour
 
     void Start()
     {
-        Invoke("LoadMenu", 31);
+        Invoke("LoadMenu", 26);
     }
 
     void Update()
